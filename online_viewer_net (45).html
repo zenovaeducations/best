@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best International School</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#FAF8F5;
+    font-family:'Poppins',sans-serif;
+}
+
+/* TOP PURPLE BAR */
+
+.top-bar{
+    width:100%;
+    height:8px;
+    background:#4C1D95;
+}
+
+/* HEADER */
+
+header{
+    width:100%;
+    background:#FAF8F5;
+    border-bottom:1px solid #e8e8e8;
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+.header-container{
+    max-width:1400px;
+    margin:auto;
+    padding:18px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+/* LOGO */
+
+.logo{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+}
+
+.best{
+    font-family:'Anton',sans-serif;
+    font-size:58px;
+    line-height:1;
+    color:#4C1D95;
+}
+
+.line{
+    width:2px;
+    height:55px;
+    background:#cfcfcf;
+    margin-top:2px;
+}
+
+.logo-text{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.logo-text h3{
+    font-size:13px;
+    font-weight:700;
+    line-height:1.2;
+    color:#111;
+    text-transform:uppercase;
+}
+
+.logo-text p{
+    font-size:11px;
+    color:#222;
+    margin-top:2px;
+    font-weight:500;
+}
+
+/* MENU ICON */
+
+.menu-btn{
+    width:52px;
+    height:52px;
+    border:none;
+    background:transparent;
+    cursor:pointer;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:6px;
+}
+
+.menu-btn span{
+    width:32px;
+    height:3px;
+    background:#4C1D95;
+    border-radius:10px;
+    margin-left:auto;
+    transition:0.3s;
+}
+
+/* MOBILE MENU */
+
+.mobile-menu{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:280px;
+    height:100vh;
+    background:#ffffff;
+    box-shadow:-8px 0 25px rgba(0,0,0,0.15);
+    transition:.35s;
+    z-index:1000;
+    padding-top:90px;
+}
+
+.mobile-menu.active{
+    right:0;
+}
+
+.mobile-menu a{
+    display:block;
+    padding:18px 25px;
+    text-decoration:none;
+    color:#111;
+    font-weight:600;
+    border-bottom:1px solid #f0f0f0;
+}
+
+.mobile-menu a:hover{
+    background:#FAF8F5;
+    color:#F97316;
+}
+
+.close-btn{
+    position:absolute;
+    top:20px;
+    right:25px;
+    font-size:35px;
+    cursor:pointer;
+    color:#111;
+}
+
+/* OVERLAY */
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.4);
+    display:none;
+    z-index:999;
+}
+
+.overlay.active{
+    display:block;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.best{
+    font-size:48px;
+}
+
+.logo-text h3{
+    font-size:12px;
+}
+
+.logo-text p{
+    font-size:10px;
+}
+
+.header-container{
+    padding:15px;
+}
+
+}
+
+/* SMALL MOBILE */
+
+@media(max-width:430px){
+
+.best{
+    font-size:42px;
+}
+
+.line{
+    height:45px;
+}
+
+.logo-text h3{
+    font-size:11px;
+}
+
+.logo-text p{
+    font-size:9px;
+}
+
+}
+.welcome-tag{
+    margin-top:42px;
+    margin-left:32px;
+
+    color:#F97316;
+
+    font-size:09px;
+    font-weight:600;
+
+    letter-spacing:17px;
+
+    text-transform:uppercase;
+
+    line-height:1;
+}
+.hero-text{
+    padding-left:32px;
+    margin-top:18px;
+}
+
+.hero-title{
+    font-family:'Anton',sans-serif;
+
+    font-size:45px;
+
+    line-height:0.95;
+
+    letter-spacing:1px;
+
+    color:#111111;
+
+    font-weight:400;
+}
+
+.hero-title .purple{
+    color:#4C1D95;
+}
+
+.hero-image-wrap{
+    position:relative;
+
+    width:100%;
+
+    max-width:340px;
+
+    height:420px;
+
+    margin:35px auto 0;
+}
+
+/* PURPLE BOX BEHIND */
+
+.purple-box{
+    position:absolute;
+
+    width:96%;
+    height:96%;
+
+    background:#4C1D95;
+
+    left:0;
+    top:0;
+
+    z-index:1;
+}
+
+/* MAIN IMAGE */
+
+.hero-image{
+    position:absolute;
+
+    width:88%;
+    height:88%;
+
+    object-fit:cover;
+
+    right:0;
+    top:28px;
+
+    border:3px solid #F97316;
+
+    z-index:3;
+}
+
+/* BLACK OFFSET SHADOW */
+
+.black-shadow{
+    position:absolute;
+
+    width:88%;
+    height:80%;
+
+    background:#111111;
+
+    right:-8px;
+    bottom:-8px;
+
+    z-index:2;
+}
+.future-text{
+    margin-left:32px;
+    margin-top:22px;
+
+    font-family:'Allura',cursive;
+
+    font-size:30px;
+
+    color:#F97316;
+
+    line-height:1;
+}
+
+.orange-line{
+    width:120px;
+    height:4px;
+
+    background:#F97316;
+
+    margin-left:32px;
+    margin-top:12px;
+
+    border-radius:20px;
+}
+.hero-description{
+    margin-left:32px;
+    margin-top:20px;
+
+    max-width:320px;
+
+    color:#555;
+
+    font-size:12px;
+
+    line-height:1.8;
+
+    font-weight:400;
+}
+.hero-buttons{
+    margin-left:32px;
+    margin-top:28px;
+
+    display:flex;
+    gap:14px;
+
+    flex-wrap:nowrap;
+}
+
+/* APPLY NOW */
+
+.apply-btn{
+    text-decoration:none;
+
+    background:#4C1D95;
+    color:white;
+
+    padding:12px 20px;
+
+    border-radius:0px;
+
+    font-size:14px;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.apply-btn:hover{
+    transform:translateY(-2px);
+}
+
+/* EXPLORE CAMPUS */
+
+.explore-btn{
+    text-decoration:none;
+
+    color:#111;
+
+    border:2px solid #111;
+
+    padding:1px 20px;
+
+    border-radius:0px;
+
+    font-size:14px;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.explore-btn:hover{
+    background:#111;
+    color:white;
+}
+.explore-btn{
+    border:2px solid #4C1D95;
+    color:#4C1D95;
+}
+.apply-btn{
+    background:#F97316;
+}
+.apply-btn,
+.explore-btn{
+    width:130px;
+    text-align:center;
+}
+
+.stats-section{
+    width:90%;
+    margin:60px auto 0;
+
+    background:#ffffff;
+
+    border:2px solid #F97316;
+
+    padding:25px 15px;
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+    box-shadow:6px 7px 0px #111111;
+}
+.stat-box{
+    text-align:center;
+}
+
+.stat-box h2{
+    font-family:'Anton',sans-serif;
+
+    font-size:38px;
+
+    color:#4C1D95;
+
+    font-weight:400;
+
+    line-height:1;
+}
+
+.stat-box p{
+    margin-top:8px;
+
+    font-size:14px;
+
+    color:#666;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+}
+
+/* Desktop */
+
+@media(min-width:768px){
+
+.stats-section{
+
+    max-width:1100px;
+
+    grid-template-columns:repeat(4,1fr);
+
+    padding:35px;
+}
+
+.stat-box h2{
+    font-size:55px;
+}
+
+.stat-box p{
+    font-size:15px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-bar"></div>
+
+<header>
+
+<div class="header-container">
+
+<div class="logo">
+
+<div class="best">BEST</div>
+
+<div class="line"></div>
+
+<div class="logo-text">
+<h3>INTERNATIONAL<br>ENGLISH SCHOOL</h3>
+<p>& PU COLLEGE</p>
+</div>
+
+</div>
+
+<button class="menu-btn" onclick="openMenu()">
+<span></span>
+<span></span>
+<span></span>
+</button>
+
+</div>
+
+</header>
+
+<div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+<div class="mobile-menu" id="mobileMenu">
+
+<div class="close-btn" onclick="closeMenu()">×</div>
+
+<a href="#">Home</a>
+<a href="#">About Us</a>
+<a href="#">Academics</a>
+<a href="#">Facilities</a>
+<a href="#">Gallery</a>
+<a href="#">Admissions</a>
+<a href="#">Contact Us</a>
+
+</div>
+<!-- WELCOME TO -->
+
+<div class="welcome-tag">
+    WELCOME TO
+</div>
+<section class="hero-text">
+
+    <h1 class="hero-title">
+        BEST<br>
+        INTERNATIONAL<br>
+
+        <span class="purple">
+            ENGLISH SCHOOL &
+        </span><br>
+
+        <span class="purple">
+            PU COLLEGE
+        </span>
+    </h1>
+
+</section>
+<div class="hero-image-wrap">
+
+    <div class="purple-box"></div>
+
+    <img src="1.png" alt="Students" class="hero-image">
+
+    <div class="black-shadow"></div>
+
+</div>
+
+<p class="future-text">
+  Your Future Begins Here.
+</p>
+<div class="orange-line"></div>
+<p class="hero-description">
+    Empowering students with knowledge, innovation,
+    and excellence through world-class education.
+</p>
+<div class="hero-buttons">
+
+    <a href="#" class="apply-btn">
+        Apply Now
+    </a>
+
+    <a href="#" class="explore-btn">
+        Explore Campus
+    </a>
+
+</div>
+
+<section class="stats-section">
+
+    <div class="stat-box">
+        <h2>2500+</h2>
+        <p>Students</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>150+</h2>
+        <p>Faculty</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>25+</h2>
+        <p>Laboratories</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>95%</h2>
+        <p>Results</p>
+    </div>
+
+</section>
+
+
+.
+
+<script>
+
+function openMenu(){
+document.getElementById("mobileMenu").classList.add("active");
+document.getElementById("overlay").classList.add("active");
+}
+
+function closeMenu(){
+document.getElementById("mobileMenu").classList.remove("active");
+document.getElementById("overlay").classList.remove("active");
+}
+
+</script>
+
+</body>
+</html>
