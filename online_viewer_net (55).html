@@ -1,0 +1,3183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best International School</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#FAF8F5;
+    font-family:'Poppins',sans-serif;
+}
+
+/* TOP PURPLE BAR */
+
+.top-bar{
+    width:100%;
+    height:8px;
+    background:#4C1D95;
+}
+
+/* HEADER */
+
+header{
+    width:100%;
+    background:#FAF8F5;
+    border-bottom:1px solid #e8e8e8;
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+.header-container{
+    max-width:1400px;
+    margin:auto;
+    padding:18px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+/* LOGO */
+
+.logo{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+}
+
+.best{
+    font-family:'Anton',sans-serif;
+    font-size:58px;
+    line-height:1;
+    color:#4C1D95;
+}
+
+.line{
+    width:2px;
+    height:55px;
+    background:#cfcfcf;
+    margin-top:2px;
+}
+
+.logo-text{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.logo-text h3{
+    font-size:13px;
+    font-weight:700;
+    line-height:1.2;
+    color:#111;
+    text-transform:uppercase;
+}
+
+.logo-text p{
+    font-size:11px;
+    color:#222;
+    margin-top:2px;
+    font-weight:500;
+}
+
+/* MENU ICON */
+
+.menu-btn{
+    width:52px;
+    height:52px;
+    border:none;
+    background:transparent;
+    cursor:pointer;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:6px;
+}
+
+.menu-btn span{
+    width:32px;
+    height:3px;
+    background:#4C1D95;
+    border-radius:10px;
+    margin-left:auto;
+    transition:0.3s;
+}
+
+/* MOBILE MENU */
+
+.mobile-menu{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:280px;
+    height:100vh;
+    background:#ffffff;
+    box-shadow:-8px 0 25px rgba(0,0,0,0.15);
+    transition:.35s;
+    z-index:1000;
+    padding-top:90px;
+}
+
+.mobile-menu.active{
+    right:0;
+}
+
+.mobile-menu a{
+    display:block;
+    padding:18px 25px;
+    text-decoration:none;
+    color:#111;
+    font-weight:600;
+    border-bottom:1px solid #f0f0f0;
+}
+
+.mobile-menu a:hover{
+    background:#FAF8F5;
+    color:#F97316;
+}
+
+.close-btn{
+    position:absolute;
+    top:20px;
+    right:25px;
+    font-size:35px;
+    cursor:pointer;
+    color:#111;
+}
+
+/* OVERLAY */
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.4);
+    display:none;
+    z-index:999;
+}
+
+.overlay.active{
+    display:block;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.best{
+    font-size:48px;
+}
+
+.logo-text h3{
+    font-size:12px;
+}
+
+.logo-text p{
+    font-size:10px;
+}
+
+.header-container{
+    padding:15px;
+}
+
+}
+
+/* SMALL MOBILE */
+
+@media(max-width:430px){
+
+.best{
+    font-size:42px;
+}
+
+.line{
+    height:45px;
+}
+
+.logo-text h3{
+    font-size:11px;
+}
+
+.logo-text p{
+    font-size:9px;
+}
+
+}
+.welcome-tag{
+    margin-top:42px;
+    margin-left:32px;
+
+    color:#F97316;
+
+    font-size:09px;
+    font-weight:600;
+
+    letter-spacing:17px;
+
+    text-transform:uppercase;
+
+    line-height:1;
+}
+.hero-text{
+    padding-left:32px;
+    margin-top:18px;
+}
+
+.hero-title{
+    font-family:'Anton',sans-serif;
+
+    font-size:45px;
+
+    line-height:0.95;
+
+    letter-spacing:1px;
+
+    color:#111111;
+
+    font-weight:400;
+}
+
+.hero-title .purple{
+    color:#4C1D95;
+}
+
+.hero-image-wrap{
+    position:relative;
+
+    width:100%;
+
+    max-width:340px;
+
+    height:420px;
+
+    margin:35px auto 0;
+}
+
+/* PURPLE BOX BEHIND */
+
+.purple-box{
+    position:absolute;
+
+    width:96%;
+    height:96%;
+
+    background:#4C1D95;
+
+    left:0;
+    top:0;
+
+    z-index:1;
+}
+
+/* MAIN IMAGE */
+
+.hero-image{
+    position:absolute;
+
+    width:88%;
+    height:88%;
+
+    object-fit:cover;
+
+    right:0;
+    top:28px;
+
+    border:3px solid #F97316;
+
+    z-index:3;
+}
+
+/* BLACK OFFSET SHADOW */
+
+.black-shadow{
+    position:absolute;
+
+    width:88%;
+    height:80%;
+
+    background:#111111;
+
+    right:-8px;
+    bottom:-8px;
+
+    z-index:2;
+}
+.future-text{
+    margin-left:32px;
+    margin-top:22px;
+
+    font-family:'Allura',cursive;
+
+    font-size:30px;
+
+    color:#F97316;
+
+    line-height:1;
+}
+
+.orange-line{
+    width:120px;
+    height:4px;
+
+    background:#F97316;
+
+    margin-left:32px;
+    margin-top:12px;
+
+    border-radius:20px;
+}
+.hero-description{
+    margin-left:32px;
+    margin-top:20px;
+
+    max-width:320px;
+
+    color:#555;
+
+    font-size:12px;
+
+    line-height:1.8;
+
+    font-weight:400;
+}
+.hero-buttons{
+    margin-left:32px;
+    margin-top:28px;
+
+    display:flex;
+    gap:14px;
+
+    flex-wrap:nowrap;
+}
+
+/* APPLY NOW */
+
+.apply-btn{
+    text-decoration:none;
+
+    background:#4C1D95;
+    color:white;
+
+    padding:12px 20px;
+
+    border-radius:0px;
+
+    font-size:14px;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.apply-btn:hover{
+    transform:translateY(-2px);
+}
+
+/* EXPLORE CAMPUS */
+
+.explore-btn{
+    text-decoration:none;
+
+    color:#111;
+
+    border:2px solid #111;
+
+    padding:1px 20px;
+
+    border-radius:0px;
+
+    font-size:14px;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.explore-btn:hover{
+    background:#111;
+    color:white;
+}
+.explore-btn{
+    border:2px solid #4C1D95;
+    color:#4C1D95;
+}
+.apply-btn{
+    background:#F97316;
+}
+.apply-btn,
+.explore-btn{
+    width:130px;
+    text-align:center;
+}
+
+.stats-section{
+    width:90%;
+    margin:60px auto 0;
+
+    background:#ffffff;
+
+    border:2px solid #F97316;
+
+    padding:25px 15px;
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+    box-shadow:6px 7px 0px #111111;
+}
+.stat-box{
+    text-align:center;
+}
+
+.stat-box h2{
+    font-family:'Anton',sans-serif;
+
+    font-size:38px;
+
+    color:#4C1D95;
+
+    font-weight:400;
+
+    line-height:1;
+}
+
+.stat-box p{
+    margin-top:8px;
+
+    font-size:14px;
+
+    color:#666;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+}
+
+/* Desktop */
+
+@media(min-width:768px){
+
+.stats-section{
+
+    max-width:1100px;
+
+    grid-template-columns:repeat(4,1fr);
+
+    padding:35px;
+}
+
+.stat-box h2{
+    font-size:55px;
+}
+
+.stat-box p{
+    font-size:15px;
+}
+
+}
+/* WHY CHOOSE US */
+
+.school-features{
+    width:92%;
+    margin:80px auto;
+}
+
+/* TITLE */
+
+.section-title{
+    text-align:center;
+}
+
+.small-title{
+    font-family:'Allura',cursive;
+    font-size:55px;
+    color:#F97316;
+}
+
+.section-title h2{
+    font-family:'Anton',sans-serif;
+    font-size:65px;
+    line-height:1;
+    color:#4C1D95;
+}
+
+.section-title p{
+    max-width:450px;
+    margin:15px auto 0;
+    color:#666;
+    font-size:14px;
+    line-height:1.7;
+}
+
+/* LABEL */
+
+.school-label{
+    background:#4C1D95;
+    color:white;
+
+    width:fit-content;
+
+    padding:12px 25px;
+
+    border-radius:8px;
+
+    margin:40px auto 25px;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+}
+
+/* GRID */
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+/* CARD */
+
+.feature-card{
+    background:white;
+
+    border:2px solid #4C1D95;
+
+    padding:25px 18px;
+
+    text-align:center;
+
+    position:relative;
+
+    box-shadow:4px 4px 0px #111111;
+}
+
+.feature-icon{
+    font-size:38px;
+    margin-bottom:12px;
+}
+
+.feature-card h3{
+    font-size:18px;
+    color:#4C1D95;
+    margin-bottom:12px;
+    font-weight:700;
+}
+
+.feature-card p{
+    font-size:13px;
+    color:#666;
+    line-height:1.7;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.section-title h2{
+    font-size:52px;
+}
+
+.small-title{
+    font-size:45px;
+}
+
+.feature-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+}
+
+}
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.feature-card{
+    animation:fadeUp .8s ease forwards;
+}
+
+.feature-card:hover{
+    transform:translateY(-8px);
+    transition:.3s;
+}
+
+.feature-card:hover .feature-icon{
+    transform:scale(1.15);
+}
+
+.feature-icon{
+    transition:.3s;
+}
+
+.college-features{
+    width:92%;
+    margin:70px auto;
+}
+
+.college-label{
+    background:#F97316;
+    color:white;
+
+    width:fit-content;
+
+    padding:12px 25px;
+
+    border-radius:8px;
+
+    margin:0 auto 25px;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+}
+
+.college-card{
+    border:2px solid #F97316;
+}
+
+.college-card h3{
+    color:#F97316;
+}
+.mission-section{
+    width:92%;
+    margin:80px auto;
+
+    display:flex;
+    flex-direction:column;
+    gap:35px;
+}
+
+/* IMAGE */
+
+.mission-image-wrap{
+    position:relative;
+
+    width:100%;
+    max-width:350px;
+
+    height:420px;
+
+    margin:auto;
+}
+
+.mission-purple{
+    position:absolute;
+
+    width:98%;
+    height:98%;
+
+    background:#4C1D95;
+
+    left:0;
+    top:0;
+
+    z-index:1;
+}
+
+.mission-image{
+    position:absolute;
+
+    width:94%;
+    height:94%;
+
+    object-fit:cover;
+
+    right:0;
+    top:12px;
+
+    border:2px solid #F97316;
+
+    z-index:3;
+}
+
+.mission-shadow{
+    position:absolute;
+
+    width:94%;
+    height:94%;
+
+    background:#111;
+
+    right:-6px;
+    bottom:-6px;
+
+    z-index:2;
+}
+
+/* CONTENT */
+
+.mission-small{
+    color:#F97316;
+
+    letter-spacing:5px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:10px;
+}
+
+.mission-title{
+    font-family:'Anton',sans-serif;
+
+    font-size:58px;
+
+    line-height:0.95;
+
+    color:#4C1D95;
+
+    font-weight:400;
+}
+
+.mission-line{
+    width:100px;
+    height:3px;
+
+    background:#F97316;
+
+    margin:18px 0;
+}
+
+.mission-text{
+    color:#666;
+
+    line-height:1.9;
+
+    font-size:15px;
+}
+
+.mission-points{
+    margin-top:20px;
+
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+
+    font-weight:600;
+
+    color:#111;
+}
+
+/* DESKTOP */
+
+@media(min-width:900px){
+
+.mission-section{
+    max-width:1200px;
+
+    flex-direction:row;
+
+    align-items:center;
+
+    justify-content:space-between;
+}
+
+.mission-content{
+    width:50%;
+}
+
+.mission-image-wrap{
+    width:45%;
+    max-width:450px;
+}
+
+.mission-title{
+    font-size:90px;
+}
+
+}
+/* CAMPUS SECTION */
+
+.campus-section{
+    width:100%;
+    margin:90px 0;
+}
+
+.campus-small{
+    color:#F97316;
+
+    letter-spacing:5px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    text-align:center;
+}
+
+.campus-title{
+    font-family:'Anton',sans-serif;
+
+    font-size:60px;
+
+    line-height:.95;
+
+    color:#4C1D95;
+
+    text-align:center;
+
+    margin-top:10px;
+}
+
+.campus-line{
+    width:100px;
+    height:3px;
+
+    background:#F97316;
+
+    margin:18px auto 40px;
+}
+
+/* GALLERY */
+
+.gallery-wrapper{
+    width:100%;
+
+    overflow:hidden;
+}
+
+.gallery-track{
+    display:flex;
+
+    gap:25px;
+
+    width:max-content;
+
+    animation:scrollGallery 30s linear infinite;
+}
+
+.gallery-track:hover{
+    animation-play-state:paused;
+}
+
+/* CARD */
+
+.gallery-card{
+    width:280px;
+
+    position:relative;
+
+    flex-shrink:0;
+}
+
+.gallery-card img{
+    width:100%;
+
+    height:200px;
+
+    object-fit:cover;
+
+    border:2px solid #F97316;
+
+    display:block;
+
+    box-shadow:4px 4px 0px #111;
+}
+
+.gallery-card span{
+    position:absolute;
+
+    bottom:15px;
+    left:15px;
+
+    background:rgba(0,0,0,.75);
+
+    color:white;
+
+    padding:8px 12px;
+
+    font-size:12px;
+
+    letter-spacing:1px;
+
+    font-weight:600;
+}
+
+/* ANIMATION */
+
+@keyframes scrollGallery{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.campus-title{
+    font-size:42px;
+}
+
+.gallery-card{
+    width:230px;
+}
+
+.gallery-card img{
+    height:170px;
+}
+
+}
+/* COLLEGE SECTION */
+
+.college-gallery-section{
+    width:100%;
+    margin:100px 0;
+}
+
+.college-small{
+    text-align:center;
+
+    color:#4C1D95;
+
+    letter-spacing:5px;
+
+    font-size:14px;
+
+    font-weight:600;
+}
+
+.college-title{
+    text-align:center;
+
+    font-family:'Anton',sans-serif;
+
+    font-size:60px;
+
+    line-height:.95;
+
+    color:#F97316;
+
+    margin-top:10px;
+}
+
+.college-line{
+    width:100px;
+    height:3px;
+
+    background:#4C1D95;
+
+    margin:18px auto 40px;
+}
+
+/* WRAPPER */
+
+.college-gallery-wrapper{
+    overflow:hidden;
+    width:100%;
+}
+
+/* OPPOSITE DIRECTION */
+
+.college-gallery-track{
+    display:flex;
+
+    gap:18px;
+
+    width:max-content;
+
+    animation:moveRight 35s linear infinite;
+}
+
+/* CARD */
+
+.college-card{
+    flex-shrink:0;
+
+    background:#fff;
+
+    border:2px solid #F97316;
+
+    color:#F97316;
+
+    font-weight:700;
+
+    font-size:15px;
+
+    padding:22px 28px;
+
+    box-shadow:4px 4px 0px #111;
+
+    min-width:220px;
+
+    text-align:center;
+
+    transition:.3s;
+}
+
+.college-card:hover{
+    transform:translateY(-5px);
+}
+
+/* LEFT TO RIGHT */
+
+@keyframes moveRight{
+
+    from{
+        transform:translateX(-50%);
+    }
+
+    to{
+        transform:translateX(0%);
+    }
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.college-title{
+    font-size:42px;
+}
+
+.college-card{
+    min-width:180px;
+
+    font-size:13px;
+
+    padding:18px 20px;
+}
+
+}
+.chairman-card{
+
+    width:90%;
+
+    max-width:700px;
+
+    margin:40px auto;
+
+    background:#fff;
+
+    border:2px solid #F97316;
+
+    padding:25px;
+
+    text-align:center;
+
+    position:relative;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:10px 10px 0px #4C1D95;
+
+}
+
+.chairman-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.chairman-photo-wrap{
+
+    width:130px;
+    height:130px;
+
+    margin:0 auto 18px;
+
+    border:3px solid #F97316;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    background:#fff;
+
+}
+
+.chairman-photo{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.chairman-name{
+
+    font-size:34px;
+
+    color:#111;
+
+    margin-bottom:10px;
+
+    font-weight:700;
+
+}
+
+.chairman-designation{
+
+    color:#F97316;
+
+    font-size:26px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    margin-bottom:10px;
+
+}
+
+.chairman-trust{
+
+    color:#555;
+
+    font-size:18px;
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.chairman-card{
+
+    width:92%;
+
+    padding:20px;
+
+    box-shadow:6px 6px 0px #4C1D95;
+
+}
+
+.chairman-photo-wrap{
+
+    width:95px;
+    height:95px;
+
+}
+
+.chairman-name{
+
+    font-size:24px;
+
+}
+
+.chairman-designation{
+
+    font-size:18px;
+
+}
+
+.chairman-trust{
+
+    font-size:14px;
+
+}
+
+}
+.leaders-heading{
+
+    text-align:center;
+
+    margin:100px auto 50px;
+
+    width:90%;
+
+}
+
+.leaders-small-title{
+
+    color:#F97316;
+
+    letter-spacing:5px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.leaders-icon{
+
+    color:#F97316;
+
+    font-size:38px;
+
+    margin-bottom:15px;
+
+    position:relative;
+
+    display:inline-block;
+
+}
+
+.leaders-icon::before{
+
+    content:'';
+
+    position:absolute;
+
+    width:90px;
+
+    height:2px;
+
+    background:#F97316;
+
+    right:55px;
+
+    top:50%;
+
+}
+
+.leaders-icon::after{
+
+    content:'';
+
+    position:absolute;
+
+    width:90px;
+
+    height:2px;
+
+    background:#F97316;
+
+    left:55px;
+
+    top:50%;
+
+}
+
+.leaders-main-title{
+
+    font-family:'Anton',sans-serif;
+
+    font-size:70px;
+
+    line-height:.95;
+
+    color:#4C1D95;
+
+    margin-top:15px;
+
+}
+
+.leaders-subtitle{
+
+    margin-top:25px;
+
+    color:#666;
+
+    font-size:18px;
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.leaders-main-title{
+
+    font-size:42px;
+
+}
+
+.leaders-subtitle{
+
+    font-size:14px;
+
+}
+
+.leaders-icon::before{
+
+    width:50px;
+
+    right:45px;
+
+}
+
+.leaders-icon::after{
+
+    width:50px;
+
+    left:45px;
+
+}
+
+}
+.team-row{
+
+    width:95%;
+
+    margin:50px auto 0;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:nowrap;
+
+}
+
+/* MEMBER */
+
+.team-member{
+
+    text-align:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    width:90px;
+
+}
+
+.team-member:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/* PHOTO */
+
+.team-member img{
+
+    width:70px;
+    height:70px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:3px solid #F97316;
+
+    padding:3px;
+
+    background:white;
+
+}
+
+/* NAME */
+
+.team-member h4{
+
+    margin-top:12px;
+
+    font-size:13px;
+
+    line-height:1.3;
+
+    color:#111;
+
+    font-weight:700;
+
+}
+
+/* DESIGNATION */
+
+.team-member span{
+
+    display:block;
+
+    margin-top:6px;
+
+    color:#4C1D95;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+}
+.popup-overlay{
+
+    display:none;
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.7);
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+}
+
+.popup-box{
+
+    width:90%;
+    max-width:600px;
+
+    background:white;
+
+    padding:25px;
+
+    border:2px solid #F97316;
+
+    box-shadow:8px 8px 0px #4C1D95;
+
+    position:relative;
+
+    border-radius:10px;
+}
+
+.popup-close{
+
+    position:absolute;
+
+    right:15px;
+    top:10px;
+
+    font-size:30px;
+
+    cursor:pointer;
+}
+
+#popupTitle{
+
+    color:#4C1D95;
+
+    margin-bottom:15px;
+}
+#popupContent{
+    max-height:60vh;
+    overflow-y:auto;
+    line-height:1.8;
+    color:#444;
+}
+
+#popupContent h3,
+#popupContent h4{
+    color:#4C1D95;
+    margin-bottom:12px;
+}
+
+#popupContent ul{
+    padding-left:20px;
+}
+
+#popupContent p{
+    margin-bottom:12px;
+}
+.academic-intro{
+
+    width:92%;
+
+    margin:100px auto 70px;
+}
+
+.academic-small{
+
+    text-align:center;
+
+    color:#F97316;
+
+    letter-spacing:5px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    margin-bottom:50px;
+}
+
+.academic-content{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:50px;
+}
+
+/* LEFT */
+
+.academic-left{
+
+    flex:1.2;
+}
+
+.academic-title{
+
+    font-family:'Anton',sans-serif;
+
+    font-size:78px;
+
+    line-height:.95;
+
+    color:#4C1D95;
+
+    font-weight:400;
+}
+
+.orange-text{
+
+    color:#F97316;
+}
+
+/* PROMISE */
+
+.promise-wrap{
+
+    position:relative;
+
+    display:inline-block;
+
+    margin-top:25px;
+}
+
+.promise-text{
+
+    font-family:'Allura',cursive;
+
+    font-size:65px;
+
+    color:#F97316;
+}
+
+
+/* RIGHT */
+
+.academic-right{
+
+    flex:1;
+
+    border-left:2px dashed #d5c7ff;
+
+    padding-left:40px;
+}
+
+.academic-right h3{
+
+    color:#4C1D95;
+
+    font-size:34px;
+
+    margin-bottom:15px;
+
+    font-weight:700;
+}
+
+.academic-right p{
+
+    color:#555;
+
+    line-height:2;
+
+    font-size:16px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.academic-content{
+
+    flex-direction:column;
+
+    gap:30px;
+}
+
+.academic-title{
+
+    font-size:48px;
+}
+
+.promise-text{
+
+    font-size:45px;
+}
+
+.academic-right{
+
+    border-left:none;
+
+    border-top:2px dashed #d5c7ff;
+
+    padding-left:0;
+
+    padding-top:25px;
+}
+
+.academic-right h3{
+
+    font-size:26px;
+}
+
+}
+.academic-roadmap{
+
+    width:92%;
+
+    margin:60px auto;
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+    justify-content:center;
+}
+
+/* COMMON */
+
+.stage{
+
+    position:relative;
+
+    color:white;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    padding:18px 28px;
+
+    min-width:140px;
+
+    text-align:center;
+
+    clip-path:polygon(
+        0 0,
+        92% 0,
+        100% 50%,
+        92% 100%,
+        0 100%,
+        8% 50%
+    );
+
+    box-shadow:4px 4px 0px rgba(0,0,0,.15);
+}
+
+/* PURPLE GRADIENT */
+
+.stage1{
+    background:#B794F4;
+}
+
+.stage2{
+    background:#9F7AEA;
+}
+
+.stage3{
+    background:#805AD5;
+}
+
+.stage4{
+    background:#4C1D95;
+}
+
+/* ORANGE */
+
+.stage5{
+    background:#F97316;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.stage{
+
+    min-width:120px;
+
+    font-size:13px;
+
+    padding:15px 18px;
+}
+
+.stage4{
+    min-width:220px;
+}
+
+}
+.pu-branches{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    margin-top:20px;
+}
+
+.branch{
+
+    width:100px;
+}
+
+.branch-title{
+
+    background:#F97316;
+
+    color:white;
+
+    text-align:center;
+
+    padding:8px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    border-radius:8px;
+
+    margin-bottom:8px;
+}
+
+.branch-item{
+
+    border:1.5px solid #F97316;
+
+    background:white;
+
+    padding:8px;
+
+    text-align:center;
+
+    margin-bottom:6px;
+
+    border-radius:8px;
+
+    color:#4C1D95;
+
+    font-weight:600;
+
+    font-size:12px;
+}
+.trust-section{
+
+    width:92%;
+
+    margin:120px auto;
+}
+
+.trust-small{
+
+    text-align:center;
+
+    color:#F97316;
+
+    letter-spacing:5px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+}
+
+.trust-title{
+
+    text-align:center;
+
+    font-family:'Anton',sans-serif;
+
+    color:#4C1D95;
+
+    font-size:58px;
+
+    line-height:.95;
+
+    margin-bottom:60px;
+}
+
+/* GRID */
+
+.trust-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+}
+
+/* ITEM */
+
+.trust-item{
+
+    background:white;
+
+    border-left:6px solid #F97316;
+
+    padding:20px;
+
+    box-shadow:4px 4px 0px #111;
+
+    transition:.3s;
+}
+
+.trust-item:hover{
+
+    transform:translateY(-5px);
+}
+
+.trust-item span{
+
+    font-family:'Anton',sans-serif;
+
+    font-size:50px;
+
+    color:#F97316;
+
+    line-height:1;
+}
+
+.trust-item h3{
+
+    margin-top:10px;
+
+    color:#4C1D95;
+
+    font-size:18px;
+
+    font-weight:700;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.trust-title{
+
+    font-size:42px;
+}
+
+.trust-grid{
+
+    grid-template-columns:1fr;
+}
+
+.trust-item span{
+
+    font-size:40px;
+}
+
+.trust-item h3{
+
+    font-size:16px;
+}
+
+}
+.admission-section{
+
+    width:92%;
+
+    margin:120px auto;
+}
+
+.admission-box{
+
+    background:#F97316;
+
+    color:white;
+
+    text-align:center;
+
+    padding:50px 25px;
+
+    border:3px solid #4C1D95;
+
+    box-shadow:10px 10px 0px #4C1D95;
+}
+
+.admission-small{
+
+    letter-spacing:6px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+}
+
+.admission-title{
+
+    font-family:'Anton',sans-serif;
+
+    font-size:90px;
+
+    line-height:1;
+
+    margin-bottom:15px;
+}
+
+.admission-text{
+
+    max-width:600px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+    font-size:16px;
+}
+
+/* BUTTONS */
+
+.admission-buttons{
+
+    margin-top:30px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+}
+
+.apply-now-btn{
+
+    background:white;
+
+    color:#F97316;
+
+    text-decoration:none;
+
+    padding:14px 30px;
+
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.call-btn{
+
+    border:2px solid white;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:14px 30px;
+
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.apply-now-btn:hover,
+.call-btn:hover{
+
+    transform:translateY(-3px);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.admission-title{
+
+    font-size:60px;
+}
+
+.admission-text{
+
+    font-size:14px;
+}
+
+}
+.contact-section{
+
+    width:92%;
+
+    margin:120px auto;
+}
+
+.contact-small{
+
+    text-align:center;
+
+    color:#F97316;
+
+    letter-spacing:5px;
+
+    font-size:14px;
+
+    font-weight:700;
+}
+
+.contact-title{
+
+    text-align:center;
+
+    font-family:'Anton',sans-serif;
+
+    font-size:55px;
+
+    color:#4C1D95;
+
+    line-height:.95;
+
+    margin:20px 0 50px;
+}
+
+.contact-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+}
+
+.contact-card{
+
+    background:white;
+
+    border:2px solid #F97316;
+
+    padding:25px;
+
+    text-align:center;
+
+    box-shadow:4px 4px 0px #111;
+}
+
+.contact-icon{
+
+    font-size:35px;
+
+    margin-bottom:15px;
+}
+
+.contact-card h3{
+
+    color:#4C1D95;
+
+    margin-bottom:10px;
+}
+
+.contact-card p{
+
+    color:#666;
+
+    line-height:1.7;
+}
+
+@media(max-width:768px){
+
+.contact-title{
+
+    font-size:40px;
+}
+
+.contact-grid{
+
+    grid-template-columns:1fr;
+}
+
+}
+.footer{
+
+    margin-top:100px;
+
+    background:#4C1D95;
+
+    color:white;
+
+    padding:60px 25px 30px;
+}
+
+.footer-top{
+
+    text-align:center;
+
+    margin-bottom:40px;
+}
+
+.footer-top h2{
+
+    font-family:'Anton',sans-serif;
+
+    font-size:70px;
+
+    color:#F97316;
+
+    line-height:1;
+}
+
+.footer-top p{
+
+    margin-top:10px;
+
+    font-size:15px;
+}
+
+/* MIDDLE */
+
+.footer-middle{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    max-width:1000px;
+
+    margin:auto;
+}
+
+.footer-column h3{
+
+    color:#F97316;
+
+    margin-bottom:15px;
+}
+
+.footer-column a{
+
+    display:block;
+
+    color:white;
+
+    text-decoration:none;
+
+    margin-bottom:10px;
+}
+
+.footer-column p{
+
+    margin-bottom:10px;
+
+    line-height:1.7;
+}
+
+/* BOTTOM */
+
+.footer-bottom{
+
+    text-align:center;
+
+    margin-top:40px;
+
+    padding-top:25px;
+
+    border-top:1px solid rgba(255,255,255,.2);
+
+    font-size:13px;
+
+    opacity:.9;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.footer-middle{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+}
+
+.footer-top h2{
+
+    font-size:55px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-bar"></div>
+
+<header>
+
+<div class="header-container">
+
+<div class="logo">
+
+<div class="best">BEST</div>
+
+<div class="line"></div>
+
+<div class="logo-text">
+<h3>INTERNATIONAL<br>ENGLISH SCHOOL</h3>
+<p>& PU COLLEGE</p>
+</div>
+
+</div>
+
+<button class="menu-btn" onclick="openMenu()">
+<span></span>
+<span></span>
+<span></span>
+</button>
+
+</div>
+
+</header>
+
+<div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+<div class="mobile-menu" id="mobileMenu">
+
+<div class="close-btn" onclick="closeMenu()">×</div>
+
+<a href="#">Home</a>
+<a href="#">About Us</a>
+<a href="#">Academics</a>
+<a href="#">Facilities</a>
+<a href="#">Gallery</a>
+<a href="#">Admissions</a>
+<a href="#">Contact Us</a>
+
+</div>
+<!-- WELCOME TO -->
+
+<div class="welcome-tag">
+    WELCOME TO
+</div>
+<section class="hero-text">
+
+    <h1 class="hero-title">
+        BEST<br>
+        INTERNATIONAL<br>
+
+        <span class="purple">
+            ENGLISH SCHOOL &
+        </span><br>
+
+        <span class="purple">
+            PU COLLEGE
+        </span>
+    </h1>
+
+</section>
+<div class="hero-image-wrap">
+
+    <div class="purple-box"></div>
+
+    <img src="1.png" alt="Students" class="hero-image">
+
+    <div class="black-shadow"></div>
+
+</div>
+
+<p class="future-text">
+  Your Future Begins Here.
+</p>
+<div class="orange-line"></div>
+<p class="hero-description">
+    Empowering students with knowledge, innovation,
+    and excellence through world-class education.
+</p>
+<div class="hero-buttons">
+
+    <a href="#" class="apply-btn">
+        Apply Now
+    </a>
+
+    <a href="#" class="explore-btn">
+        Explore Campus
+    </a>
+
+</div>
+
+<section class="stats-section">
+
+    <div class="stat-box">
+        <h2>2500+</h2>
+        <p>Students</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>150+</h2>
+        <p>Faculty</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>25+</h2>
+        <p>Laboratories</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>95%</h2>
+        <p>Results</p>
+    </div>
+
+</section>
+<section class="mission-section">
+
+    <div class="mission-image-wrap">
+
+        <div class="mission-purple"></div>
+
+        <img src="2.png" alt="Our Mission" class="mission-image">
+
+        <div class="mission-shadow"></div>
+
+    </div>
+
+    <div class="mission-content">
+
+        <p class="mission-small">
+            OUR MISSION
+        </p>
+
+        <h2 class="mission-title">
+            BUILDING FUTURES.<br>
+            INSPIRING SUCCESS.
+        </h2>
+
+        <div class="mission-line"></div>
+
+        <p class="mission-text">
+            To provide world-class education that nurtures knowledge,
+            innovation, leadership and character, empowering students
+            to become confident global citizens and future leaders.
+        </p>
+
+        <div class="mission-points">
+
+            <div>✓ Robotics & Innovation</div>
+
+            <div>✓ Academic Excellence</div>
+
+            <div>✓ KCET • NEET • JEE Coaching</div>
+
+            <div>✓ Skill Development Programs</div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- EXPLORE OUR CAMPUS -->
+
+<section class="campus-section">
+
+    <p class="campus-small">
+        EXPLORE OUR CAMPUS
+    </p>
+
+    <h2 class="campus-title">
+        A GLANCE INTO<br>
+        CAMPUS LIFE.
+    </h2>
+
+    <div class="campus-line"></div>
+
+    <div class="gallery-wrapper">
+
+        <div class="gallery-track">
+
+            <!-- ROW 1 -->
+
+            <div class="gallery-card">
+                <img src="campus1.jpg">
+                <span>SMART CLASSROOMS</span>
+            </div>
+
+            <div class="gallery-card">
+                <img src="campus2.jpg">
+                <span>ROBOTICS LAB</span>
+            </div>
+
+            <div class="gallery-card">
+                <img src="campus3.jpg">
+                <span>SCIENCE LAB</span>
+            </div>
+
+            <div class="gallery-card">
+                <img src="campus4.jpg">
+                <span>SPORTS ARENA</span>
+            </div>
+
+            <div class="gallery-card">
+                <img src="campus5.jpg">
+                <span>ANNUAL DAY</span>
+            </div>
+
+            <div class="gallery-card">
+                <img src="campus6.jpg">
+                <span>CAMPUS BUILDING</span>
+            </div>
+
+            <!-- DUPLICATE FOR INFINITE LOOP -->
+
+            <div class="gallery-card">
+                <img src="campus1.jpg">
+                <span>SMART CLASSROOMS</span>
+            </div>
+
+            <div class="gallery-card">
+                <img src="campus2.jpg">
+                <span>ROBOTICS LAB</span>
+            </div>
+
+            <div class="gallery-card">
+                <img src="campus3.jpg">
+                <span>SCIENCE LAB</span>
+            </div>
+
+            <div class="gallery-card">
+                <img src="campus4.jpg">
+                <span>SPORTS ARENA</span>
+            </div>
+
+            <div class="gallery-card">
+                <img src="campus5.jpg">
+                <span>ANNUAL DAY</span>
+            </div>
+
+            <div class="gallery-card">
+                <img src="campus6.jpg">
+                <span>CAMPUS BUILDING</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="college-gallery-section">
+
+    <p class="college-small">
+        PU COLLEGE PROGRAMS
+    </p>
+
+    <h2 class="college-title">
+        COMPETITIVE EXAM<br>
+        EXCELLENCE.
+    </h2>
+
+    <div class="college-line"></div>
+
+    <div class="college-gallery-wrapper">
+
+        <div class="college-gallery-track">
+
+            <div class="college-card">KCET TRAINING</div>
+            <div class="college-card">NEET COACHING</div>
+            <div class="college-card">JEE PREPARATION</div>
+            <div class="college-card">CONCEPT WISE TEACHING</div>
+            <div class="college-card">BIOLOGY LAB</div>
+            <div class="college-card">CHEMISTRY LAB</div>
+            <div class="college-card">PHYSICS LAB</div>
+            <div class="college-card">COMPUTER LAB</div>
+
+            <!-- DUPLICATE -->
+
+            <div class="college-card">KCET TRAINING</div>
+            <div class="college-card">NEET COACHING</div>
+            <div class="college-card">JEE PREPARATION</div>
+            <div class="college-card">CONCEPT WISE TEACHING</div>
+            <div class="college-card">BIOLOGY LAB</div>
+            <div class="college-card">CHEMISTRY LAB</div>
+            <div class="college-card">PHYSICS LAB</div>
+            <div class="college-card">COMPUTER LAB</div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ACADEMIC PROGRAMS -->
+
+<section class="academic-intro">
+
+    <p class="academic-small">
+        OUR ACADEMIC PROGRAMS
+    </p>
+
+    <div class="academic-content">
+
+        <!-- LEFT -->
+
+        <div class="academic-left">
+
+            <h2 class="academic-title">
+
+                <span class="orange-text">
+                    FROM AGE 3,
+                </span>
+
+                <br>
+
+                WE SHAPE THE FUTURE
+
+                <br>
+
+                FOR 15 YEARS.
+
+            </h2>
+
+            <div class="promise-wrap">
+
+                <span class="promise-text">
+                    It's Our Promise.
+                </span>
+
+                <div class="promise-line"></div>
+
+            </div>
+
+        </div>
+
+    <div class="academic-roadmap">
+
+    <div class="stage stage1">
+        NURSERY
+    </div>
+
+    <div class="stage stage2">
+        LKG
+    </div>
+
+    <div class="stage stage3">
+        UKG
+    </div>
+
+    <div class="stage stage4">
+        1ST TO 10TH GRADE
+    </div>
+
+    <div class="stage stage5">
+        PU COLLEGE
+    </div>
+
+</div>
+
+    </div>
+
+</section>
+<div class="pu-branches">
+
+    <div class="branch">
+
+        <div class="branch-title">
+            SCIENCE
+        </div>
+
+        <div class="branch-item">PCMB</div>
+
+        <div class="branch-item">PCMC</div>
+
+    </div>
+
+    <div class="branch">
+
+        <div class="branch-title">
+            COMMERCE
+        </div>
+
+        <div class="branch-item">CEBA</div>
+
+
+    </div>
+
+</div>
+<section class="trust-section">
+
+    <p class="trust-small">
+        WHY PARENTS TRUST US
+    </p>
+
+    <h2 class="trust-title">
+        MORE THAN A SCHOOL.<br>
+        A PROMISE OF EXCELLENCE.
+    </h2>
+
+    <div class="trust-grid">
+
+        <div class="trust-item">
+            <span>01</span>
+            <h3>Individual Attention</h3>
+        </div>
+
+        <div class="trust-item">
+            <span>02</span>
+            <h3>Experienced Faculty</h3>
+        </div>
+
+        <div class="trust-item">
+            <span>03</span>
+            <h3>KCET • NEET • JEE Coaching</h3>
+        </div>
+
+        <div class="trust-item">
+            <span>04</span>
+            <h3>Safe & Disciplined Campus</h3>
+        </div>
+
+        <div class="trust-item">
+            <span>05</span>
+            <h3>Skill Development</h3>
+        </div>
+
+        <div class="trust-item">
+            <span>06</span>
+            <h3>Future Ready Learning</h3>
+        </div>
+
+    </div>
+
+</section>
+<section class="leaders-heading">
+
+    <p class="leaders-small-title">
+        OUR LEADERSHIP
+    </p>
+
+    <div class="leaders-icon">
+        🏛
+    </div>
+
+    <h2 class="leaders-main-title">
+        HEAR FROM THE<br>
+        PILLARS OF OUR INSTITUTION
+    </h2>
+
+    <p class="leaders-subtitle">
+        Click on a profile to hear their message.
+    </p>
+
+</section>
+<!-- CHAIRMAN CARD -->
+
+<div class="chairman-card" onclick="openPopup('chairman')">
+
+    <div class="chairman-photo-wrap">
+
+        <img src="chairman.jpg" class="chairman-photo">
+
+    </div>
+
+    <h3 class="chairman-name">
+        Shivaputrappa S. Yettinanmani
+    </h3>
+
+    <div class="chairman-designation">
+        CHAIRMAN
+    </div>
+
+    <p class="chairman-trust">
+        Samartha Vidyaniketana Trust (R)
+    </p>
+
+</div>
+<div class="team-row">
+
+    <div class="team-member"
+         onclick="openPopup('admin')">
+
+        <img src="admin.jpg">
+
+        <h4>Sharanabasava S. Yettinanmani</h4>
+
+        <span>Administrator</span>
+
+    </div>
+
+    <div class="team-member"
+         onclick="openPopup('principal')">
+
+        <img src="principal.jpg">
+
+        <h4>Anand S. Yettinamani</h4>
+
+        <span>Principal</span>
+
+    </div>
+
+    <div class="team-member"
+         onclick="openPopup('vice')">
+
+        <img src="vice.jpg">
+
+        <h4>Guruprasad Patel</h4>
+
+        <span>Vice Principal</span>
+
+    </div>
+
+</div>
+<!-- WHY CHOOSE US - SCHOOL SECTION -->
+
+<section class="school-features">
+
+    <div class="section-title">
+
+        <span class="small-title">WHY</span>
+
+        <h2>CHOOSE US</h2>
+
+        <p>
+            A perfect blend of academics, innovation and overall development.
+        </p>
+
+    </div>
+
+    <div class="school-label">
+        FOR SCHOOL STUDENTS
+    </div>
+
+    <div class="feature-grid">
+
+        <!-- CARD 1 -->
+
+        <div class="feature-card">
+            <div class="feature-icon">🤖</div>
+
+            <h3>ROBOTICS</h3>
+
+            <p>
+                Hands-on robotics learning to build creativity and innovation.
+            </p>
+        </div>
+
+        <!-- CARD 2 -->
+
+        <div class="feature-card">
+            <div class="feature-icon">🥋</div>
+
+            <h3>KARATE</h3>
+
+            <p>
+                Builds confidence, discipline and physical strength.
+            </p>
+        </div>
+
+        <!-- CARD 3 -->
+
+        <div class="feature-card">
+            <div class="feature-icon">🧠</div>
+
+            <h3>SKILL DEVELOPMENT</h3>
+
+            <p>
+                Enhancing life skills for a smarter and brighter future.
+            </p>
+        </div>
+
+        <!-- CARD 4 -->
+
+        <div class="feature-card">
+            <div class="feature-icon">✍️</div>
+
+            <h3>HANDWRITING TRAINING</h3>
+
+            <p>
+                Improving handwriting for better clarity and confidence.
+            </p>
+        </div>
+
+        <!-- CARD 5 -->
+
+        <div class="feature-card">
+            <div class="feature-icon">📚</div>
+
+            <h3>FOUNDATION COURSES</h3>
+
+            <p>
+                Strong academic foundation for future success.
+            </p>
+        </div>
+
+        <!-- CARD 6 -->
+
+        <div class="feature-card">
+            <div class="feature-icon">🏫</div>
+
+            <h3>ALL ROUND GROWTH</h3>
+
+            <p>
+                Focusing on academics, character and overall personality.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="college-features">
+
+    <div class="college-label">
+        FOR PU & COLLEGE STUDENTS
+    </div>
+
+    <div class="feature-grid">
+
+        <div class="feature-card college-card">
+            <div class="feature-icon">🎯</div>
+            <h3>KCET</h3>
+            <p>Expert guidance with concept clarity and regular practice.</p>
+        </div>
+
+        <div class="feature-card college-card">
+            <div class="feature-icon">🩺</div>
+            <h3>NEET</h3>
+            <p>Focused medical entrance coaching by experienced faculty.</p>
+        </div>
+
+        <div class="feature-card college-card">
+            <div class="feature-icon">📐</div>
+            <h3>JEE</h3>
+            <p>Advanced problem-solving and engineering preparation.</p>
+        </div>
+
+        <div class="feature-card college-card">
+            <div class="feature-icon">💼</div>
+            <h3>SKILL DEVELOPMENT</h3>
+            <p>Industry-ready communication and career skills.</p>
+        </div>
+
+        <div class="feature-card college-card">
+            <div class="feature-icon">🚀</div>
+            <h3>CAREER GUIDANCE</h3>
+            <p>Personalized counselling for higher education and careers.</p>
+        </div>
+
+        <div class="feature-card college-card">
+            <div class="feature-icon">⭐</div>
+            <h3>PERSONALITY DEVELOPMENT</h3>
+            <p>Leadership, confidence and public speaking development.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+
+function openPopup(person){
+
+    document.getElementById("popup").style.display="flex";
+
+    if(person=="chairman"){
+
+        document.getElementById("popupTitle").innerHTML =
+        "Chairman Message";
+
+        document.getElementById("popupContent").innerHTML =
+        `<h3>Message from the Chairman, Samartha Vidyaniketana Trust (R)</h3>
+
+<p>
+Dear Students, Parents, and Members of the Global Community,
+</p>
+
+<p>
+Welcome to the digital gateway of our educational initiatives.
+</p>
+
+<p>
+When we established the Samartha Vidyaniketana Trust (R), our core objective was clear and unwavering: to build a legacy of educational excellence that empowers young minds and transforms communities. Under the protective umbrella of the Trust, BEST English Medium School and BEST International PU College stand as proud testaments to this vision.
+</p>
+
+<p>
+We believe that true education is the most powerful tool for societal change. Our mission goes far beyond academic degrees; we are dedicated to shaping individuals who possess intellectual brilliance, global competence, and deep-rooted moral values.
+</p>
+
+<h4>Our Core Philosophy: Empowerment & Innovation</h4>
+
+<ul>
+<li>
+Holistic Development: Fostering an atmosphere where scientific temper meets ethical strength, discipline, and character.
+</li>
+
+<li>
+Future-Ready Infrastructure: Continuously supporting our campuses with modern resources, technological integration, and progressive learning environments.
+</li>
+
+<li>
+Inclusive Excellence: Ensuring that high-quality, world-class education is accessible, impactful, and relevant to the demands of the 21st century.
+</li>
+</ul>
+
+<h4>Looking to the Future</h4>
+
+<p>
+An institution is built on the collective dreams of its stakeholders. I want to express my deepest gratitude to our parents and well-wishers for their unwavering trust, and to our dedicated administrators and faculty who bring our vision to life every single day on campus.
+</p>
+
+<p>
+As we look ahead, the Trust remains firmly committed to expanding horizons, raising educational benchmarks, and ensuring our students graduate not just as successful professionals, but as compassionate, responsible leaders of tomorrow.
+</p>
+
+<p>
+Let us journey forward together to inspire brilliance and redefine excellence.
+</p>
+
+<p>
+With Warm Regards and Blessings,
+</p>
+
+<p>
+<strong>Mr. Shivaputrappa S. Yettinanmani</strong><br>
+Chairman<br>
+Samartha Vidyaniketana Trust (R)<br>
+Hagaribommanahalli
+</p>`;
+
+    }
+
+    else if(person=="principal"){
+
+        document.getElementById("popupTitle").innerHTML =
+        "Principal Message";
+
+        document.getElementById("popupContent").innerHTML =
+        "Add Principal Message Here";
+
+    }
+
+    else if(person=="admin"){
+
+        document.getElementById("popupTitle").innerHTML =
+        "Administrator Message";
+
+        document.getElementById("popupContent").innerHTML =
+        "Add Administrator Message Here";
+
+    }
+
+    else if(person=="vice"){
+
+        document.getElementById("popupTitle").innerHTML =
+        "Vice Principal Message";
+
+        document.getElementById("popupContent").innerHTML =
+        "Add Vice Principal Message Here";
+
+    }
+
+}
+
+function closePopup(){
+
+    document.getElementById("popup").style.display = "none";
+
+}
+
+</script>
+</script>
+<div id="popup" class="popup-overlay">
+
+    <div class="popup-box">
+
+        <span class="popup-close" onclick="closePopup()">
+            ×
+        </span>
+
+        <h2 id="popupTitle">
+            Message
+        </h2>
+
+        <p id="popupContent">
+            Content Here
+        </p>
+
+    </div>
+
+</div>
+<section class="admission-section">
+
+    <div class="admission-box">
+
+        <p class="admission-small">
+            ADMISSIONS OPEN
+        </p>
+
+        <h2 class="admission-title">
+            2026-27
+        </h2>
+
+        <p class="admission-text">
+
+            Limited seats available for Nursery, LKG, UKG,
+            Grade 1-10, PU Science and Commerce.
+
+        </p>
+
+        <div class="admission-buttons">
+
+            <a href="#" class="apply-now-btn">
+                APPLY NOW
+            </a>
+
+            <a href="#" class="call-btn">
+                CALL US
+            </a>
+            
+        </div>
+
+    </div>
+
+</section>
+<section class="contact-section">
+
+    <p class="contact-small">
+        CONTACT US
+    </p>
+
+    <h2 class="contact-title">
+        LET'S BUILD YOUR<br>
+        CHILD'S FUTURE TOGETHER.
+    </h2>
+
+    <div class="contact-grid">
+
+        <div class="contact-card">
+
+            <div class="contact-icon">📍</div>
+
+            <h3>Address</h3>
+
+            <p>
+                BEST International English School & PU College,
+                Hagaribommanahalli,
+                Vijayanagara District,
+                Karnataka
+            </p>
+
+        </div>
+
+        <div class="contact-card">
+
+            <div class="contact-icon">📞</div>
+
+            <h3>Call Us</h3>
+
+            <p>
+                +91 XXXXX XXXXX
+            </p>
+
+        </div>
+
+        <div class="contact-card">
+
+            <div class="contact-icon">✉️</div>
+
+            <h3>Email</h3>
+
+            <p>
+                info@bestschool.edu
+            </p>
+
+        </div>
+
+        <div class="contact-card">
+
+            <div class="contact-icon">💬</div>
+
+            <h3>WhatsApp</h3>
+
+            <p>
+                Chat With Us Anytime
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<footer class="footer">
+
+    <div class="footer-top">
+
+        <h2>BEST</h2>
+
+        <p>
+            International English School & PU College
+        </p>
+
+    </div>
+
+    <div class="footer-middle">
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <a href="#">Home</a>
+            <a href="#">Academics</a>
+            <a href="#">Admissions</a>
+            <a href="#">Campus Life</a>
+            <a href="#">Contact Us</a>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>Contact</h3>
+
+            <p>📍 Hagaribommanahalli</p>
+
+            <p>📞 +91 XXXXX XXXXX</p>
+
+            <p>✉️ info@bestschool.edu</p>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>Follow Us</h3>
+
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">YouTube</a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        © 2026 BEST International English School & PU College
+
+        <br><br>
+
+        Powered by Samartha Vidyaniketana Trust (R)
+
+    </div>
+
+</footer>
+</body>
+</html>
