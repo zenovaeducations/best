@@ -2334,6 +2334,24 @@ header{
 
     transform:scale(1.05);
 }
+    .mission-float{
+
+    animation:floatMission 5s ease-in-out infinite;
+}
+
+@keyframes floatMission{
+
+    0%,100%{
+
+        transform:translateY(0);
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+    }
+
+}
 </style>
 </head>
 
@@ -2460,7 +2478,7 @@ PU COLLEGE
 </section>
 <section class="mission-section reveal">
 
-    <div class="mission-image-wrap">
+    <div class="mission-image-wrap mission-float">
 
         <div class="mission-purple"></div>
 
