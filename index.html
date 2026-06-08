@@ -2259,6 +2259,44 @@ header{
         transform:translateY(0);
     }
 }
+    .welcome-tag{
+
+    animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+    .future-text{
+
+    opacity:0;
+
+    animation:futureShow 1s .9s forwards;
+}
+
+@keyframes futureShow{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-30px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+    }
+}
 </style>
 </head>
 
