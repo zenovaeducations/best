@@ -2297,6 +2297,21 @@ header{
         transform:translateX(0);
     }
 }
+    .reveal{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:all 0.9s ease;
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+}
 </style>
 </head>
 
@@ -2421,7 +2436,7 @@ PU COLLEGE
     </div>
 
 </section>
-<section class="mission-section">
+<section class="mission-section reveal">
 
     <div class="mission-image-wrap">
 
@@ -2469,7 +2484,7 @@ PU COLLEGE
 </section>
 <!-- EXPLORE OUR CAMPUS -->
 
-<section class="campus-section">
+<section class="campus-section reveal">
 
     <p class="campus-small">
         EXPLORE OUR CAMPUS
@@ -2555,7 +2570,7 @@ PU COLLEGE
     </div>
 
 </section>
-<section class="college-gallery-section">
+<section class="college-gallery-section reveal">
 
     <p class="college-small">
         PU COLLEGE PROGRAMS
@@ -2599,7 +2614,7 @@ PU COLLEGE
 </section>
 <!-- ACADEMIC PROGRAMS -->
 
-<section class="academic-intro">
+<section class="academic-intro reveal">
 
     <p class="academic-small">
         OUR ACADEMIC PROGRAMS
@@ -2692,7 +2707,7 @@ PU COLLEGE
     </div>
 
 </div>
-<section class="trust-section">
+<section class="trust-section reveal">
 
     <p class="trust-small">
         WHY PARENTS TRUST US
@@ -3507,6 +3522,35 @@ percentCounters.forEach(counter=>{
 observer.observe(counter);
 
 counter.isPercent = true;
+
+});
+
+    </script>
+    <script>
+
+const reveals =
+document.querySelectorAll('.reveal');
+
+const revealObserver =
+new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add('active');
+
+}
+
+});
+
+},{
+threshold:0.15
+});
+
+reveals.forEach(section=>{
+
+revealObserver.observe(section);
 
 });
 
