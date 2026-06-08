@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Application Submitted</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+.campus-hero{
+
+    width:92%;
+
+    margin:50px auto;
+
+    text-align:center;
+}
+
+.campus-small{
+
+    color:#F97316;
+
+    letter-spacing:5px;
+
+    font-size:14px;
+
+    font-weight:700;
+}
+
+.campus-title{
+
+    font-family:'Anton',sans-serif;
+
+    font-size:70px;
+
+    line-height:.95;
+
+    color:#4C1D95;
+
+    margin:15px 0;
+}
+
+.campus-description{
+
+    max-width:600px;
+
+    margin:auto;
+
+    color:#666;
+
+    line-height:1.8;
+}
+
+.campus-btn{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    background:#F97316;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:14px 28px;
+
+    font-weight:700;
+}
+
+.campus-cover{
+
+    width:92%;
+
+    margin:40px auto 80px;
+
+    border:2px solid #F97316;
+
+    box-shadow:8px 8px 0px #4C1D95;
+}
+
+.campus-cover img{
+
+    width:100%;
+
+    display:block;
+}
+.campus-life{
+
+    width:92%;
+
+    margin:100px auto;
+}
+
+.section-small{
+
+    text-align:center;
+
+    color:#F97316;
+
+    letter-spacing:5px;
+
+    font-size:14px;
+
+    font-weight:700;
+}
+
+.section-title{
+
+    text-align:center;
+
+    font-family:'Anton',sans-serif;
+
+    color:#4C1D95;
+
+    font-size:55px;
+
+    margin:15px 0 50px;
+}
+
+.event-card{
+
+    margin-bottom:60px;
+
+    border:2px solid #F97316;
+
+    padding:20px;
+
+    box-shadow:8px 8px 0px #4C1D95;
+}
+
+.event-header{
+
+    font-family:'Anton',sans-serif;
+
+    color:#4C1D95;
+
+    font-size:32px;
+
+    margin-bottom:20px;
+}
+
+.event-gallery{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr;
+
+    gap:10px;
+}
+
+.event-gallery img{
+
+    width:100%;
+
+    height:180px;
+
+    object-fit:cover;
+}
+
+.event-gallery img:first-child{
+
+    grid-row:span 2;
+
+    height:370px;
+}
+
+.video-btn{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    background:#F97316;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 22px;
+
+    font-weight:700;
+}
+
+@media(max-width:768px){
+
+.event-gallery{
+
+    grid-template-columns:1fr 1fr;
+}
+
+.event-gallery img:first-child{
+
+    grid-column:span 2;
+
+    height:250px;
+}
+
+.section-title{
+
+    font-size:40px;
+}
+
+}
+.academic-spaces{
+
+    width:92%;
+
+    margin:100px auto;
+}
+
+.space-card{
+
+    margin-bottom:30px;
+
+    border:2px solid #F97316;
+
+    background:white;
+
+    box-shadow:8px 8px 0px #4C1D95;
+
+    overflow:hidden;
+}
+
+.space-card img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+.space-content{
+
+    padding:20px;
+}
+
+.space-content h3{
+
+    color:#4C1D95;
+
+    margin-bottom:10px;
+
+    font-size:24px;
+}
+
+.space-content p{
+
+    color:#555;
+
+    line-height:1.8;
+}
+.student-life{
+
+    width:92%;
+
+    margin:100px auto;
+}
+
+.activity-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+}
+
+.activity-box{
+
+    border:2px solid #F97316;
+
+    background:white;
+
+    box-shadow:6px 6px 0px #4C1D95;
+}
+
+.activity-box img{
+
+    width:100%;
+
+    height:180px;
+
+    object-fit:cover;
+}
+
+.activity-box h3{
+
+    padding:15px;
+
+    text-align:center;
+
+    color:#4C1D95;
+}
+
+@media(max-width:768px){
+
+.activity-grid{
+
+    grid-template-columns:1fr;
+}
+
+}
+.admin-block{
+
+    width:92%;
+
+    margin:100px auto;
+}
+
+.admin-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+}
+
+.admin-card{
+
+    background:white;
+
+    border:2px solid #F97316;
+
+    box-shadow:6px 6px 0px #4C1D95;
+}
+
+.admin-card img{
+
+    width:100%;
+
+    height:200px;
+
+    object-fit:cover;
+}
+
+.admin-card h3{
+
+    padding:15px;
+
+    text-align:center;
+
+    color:#4C1D95;
+}
+
+@media(max-width:768px){
+
+.admin-grid{
+
+    grid-template-columns:1fr;
+}
+
+}
+.campus-ending{
+
+    width:92%;
+
+    margin:120px auto;
+
+    text-align:center;
+}
+
+.ending-title{
+
+    font-family:'Anton',sans-serif;
+
+    font-size:60px;
+
+    line-height:.95;
+
+    color:#4C1D95;
+
+    margin:15px 0;
+}
+
+.ending-text{
+
+    max-width:650px;
+
+    margin:auto;
+
+    color:#666;
+
+    line-height:2;
+
+    font-size:16px;
+}
+
+.ending-tagline{
+
+    margin-top:30px;
+
+    color:#F97316;
+
+    font-size:42px;
+
+    font-weight:700;
+}
+
+.ending-buttons{
+
+    margin-top:35px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+}
+
+.back-home-btn{
+
+    background:#4C1D95;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px 25px;
+
+    font-weight:700;
+}
+
+.apply-btn-campus{
+
+    background:#F97316;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px 25px;
+
+    font-weight:700;
+}
+
+@media(max-width:768px){
+
+.ending-title{
+
+    font-size:42px;
+}
+
+.ending-tagline{
+
+    font-size:28px;
+}
+
+}
+</style>
+</head>
+<section class="campus-hero">
+
+    <p class="campus-small">
+        DIGITAL CAMPUS TOUR
+    </p>
+
+    <h1 class="campus-title">
+        EXPLORE LIFE<br>
+        AT BEST
+    </h1>
+
+    <p class="campus-description">
+
+        A journey through our classrooms,
+        laboratories, celebrations,
+        activities and student experiences.
+
+    </p>
+
+    <a href="#campus-life" class="campus-btn">
+        EXPLORE CAMPUS
+    </a>
+
+</section>
+
+<div class="campus-cover">
+
+    <img src="campus-cover.jpg">
+<section id="campus-life" class="campus-life">
+
+    <p class="section-small">
+        CAMPUS LIFE
+    </p>
+
+    <h2 class="section-title">
+        CELEBRATIONS & EVENTS
+    </h2>
+
+    <!-- ENVIRONMENT DAY -->
+
+    <div class="event-card">
+
+        <div class="event-header">
+            ENVIRONMENT DAY
+        </div>
+
+        <div class="event-gallery">
+
+            <img src="environment1.jpg">
+
+            <img src="environment2.jpg">
+
+            <img src="environment3.jpg">
+
+            <img src="environment4.jpg">
+
+            <img src="environment5.jpg">
+
+        </div>
+
+        <a href="#" class="video-btn">
+            WATCH VIDEO
+        </a>
+
+    </div>
+
+    <!-- INDEPENDENCE DAY -->
+
+    <div class="event-card">
+
+        <div class="event-header">
+            INDEPENDENCE DAY
+        </div>
+
+        <div class="event-gallery">
+
+            <img src="independence1.jpg">
+
+            <img src="independence2.jpg">
+
+            <img src="independence3.jpg">
+
+            <img src="independence4.jpg">
+
+            <img src="independence5.jpg">
+
+        </div>
+
+        <a href="#" class="video-btn">
+            WATCH VIDEO
+        </a>
+
+    </div>
+
+    <!-- TEACHERS DAY -->
+
+    <div class="event-card">
+
+        <div class="event-header">
+            TEACHERS DAY
+        </div>
+
+        <div class="event-gallery">
+
+            <img src="teachers1.jpg">
+
+            <img src="teachers2.jpg">
+
+            <img src="teachers3.jpg">
+
+            <img src="teachers4.jpg">
+
+            <img src="teachers5.jpg">
+
+        </div>
+
+        <a href="#" class="video-btn">
+            WATCH VIDEO
+        </a>
+
+    </div>
+
+</section>
+<section class="academic-spaces">
+
+    <p class="section-small">
+        ACADEMIC SPACES
+    </p>
+
+    <h2 class="section-title">
+        WHERE LEARNING COMES ALIVE
+    </h2>
+
+    <!-- CLASSROOMS -->
+
+    <div class="space-card">
+
+        <img src="classroom.jpg">
+
+        <div class="space-content">
+
+            <h3>SMART CLASSROOMS</h3>
+
+            <p>
+                Modern learning environments equipped to make education engaging, interactive and effective.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- ROBOTICS -->
+
+    <div class="space-card">
+
+        <img src="robotics.jpg">
+
+        <div class="space-content">
+
+            <h3>ROBOTICS LAB</h3>
+
+            <p>
+                Hands-on innovation and future-ready technology learning experiences.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- PHYSICS -->
+
+    <div class="space-card">
+
+        <img src="physics.jpg">
+
+        <div class="space-content">
+
+            <h3>PHYSICS LAB</h3>
+
+            <p>
+                Practical learning that strengthens scientific understanding and experimentation.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- CHEMISTRY -->
+
+    <div class="space-card">
+
+        <img src="chemistry.jpg">
+
+        <div class="space-content">
+
+            <h3>CHEMISTRY LAB</h3>
+
+            <p>
+                Well-equipped laboratory for safe and meaningful scientific exploration.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- BIOLOGY -->
+
+    <div class="space-card">
+
+        <img src="biology.jpg">
+
+        <div class="space-content">
+
+            <h3>BIOLOGY LAB</h3>
+
+            <p>
+                Discovering life sciences through observation, experiments and practical learning.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- COMPUTER -->
+
+    <div class="space-card">
+
+        <img src="computer.jpg">
+
+        <div class="space-content">
+
+            <h3>COMPUTER LAB</h3>
+
+            <p>
+                Digital learning and computer education for future-ready students.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="student-life">
+
+    <p class="section-small">
+        STUDENT LIFE
+    </p>
+
+    <h2 class="section-title">
+        LEARNING BEYOND THE CLASSROOM
+    </h2>
+
+    <div class="activity-grid">
+
+        <div class="activity-box">
+            <img src="sports.jpg">
+            <h3>Sports & Games</h3>
+        </div>
+
+        <div class="activity-box">
+            <img src="karate.jpg">
+            <h3>Karate Training</h3>
+        </div>
+
+        <div class="activity-box">
+            <img src="skill.jpg">
+            <h3>Skill Development</h3>
+        </div>
+
+        <div class="activity-box">
+            <img src="cultural.jpg">
+            <h3>Cultural Activities</h3>
+        </div>
+
+        <div class="activity-box">
+            <img src="leadership.jpg">
+            <h3>Leadership Programs</h3>
+        </div>
+
+        <div class="activity-box">
+            <img src="handwriting.jpg">
+            <h3>Handwriting Development</h3>
+        </div>
+
+    </div>
+
+</section>
+<section class="admin-block">
+
+    <p class="section-small">
+        ADMINISTRATIVE BLOCK
+    </p>
+
+    <h2 class="section-title">
+        LEADERSHIP & SUPPORT SPACES
+    </h2>
+
+    <div class="admin-grid">
+
+        <div class="admin-card">
+            <img src="principal-office.jpg">
+            <h3>Principal Office</h3>
+        </div>
+
+
+        <div class="admin-card">
+            <img src="admin-office.jpg">
+            <h3>Administrative Office</h3>
+        </div>
+
+        <div class="admin-card">
+            <img src="reception.jpg">
+            <h3>Reception Area</h3>
+        </div>
+
+        <div class="admin-card">
+            <img src="counselling.jpg">
+            <h3>Counselling Room</h3>
+        </div>
+
+        <div class="admin-card">
+            <img src="visitor-lounge.jpg">
+            <h3>Visitor Lounge</h3>
+        </div>
+
+    </div>
+
+</section>
+<section class="campus-ending">
+
+    <p class="section-small">
+        THANK YOU FOR VISITING
+    </p>
+
+    <h2 class="ending-title">
+
+        OUR CAMPUS IS MORE THAN<br>
+        A PLACE OF LEARNING.
+
+    </h2>
+
+    <p class="ending-text">
+
+        It is a place where dreams begin,
+        talents flourish, friendships grow,
+        and future leaders are created.
+
+    </p>
+
+    <div class="ending-tagline">
+
+        Building Futures.
+        Inspiring Success.
+
+    </div>
+
+    <div class="ending-buttons">
+
+        <a href="index.html"
+           class="back-home-btn">
+
+           BACK TO HOME
+
+        </a>
+
+        <a href="form.html"
+           class="apply-btn-campus">
+
+           APPLY FOR ADMISSION
+
+        </a>
+
+    </div>
+
+</section>
+</div>
+</body>
