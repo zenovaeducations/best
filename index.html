@@ -2351,7 +2351,67 @@ header{
         transform:translateY(-10px);
     }
 
+}.section-title h2,
+.campus-title,
+.college-title,
+.academic-title,
+.trust-title,
+.leaders-main-title,
+.mission-title{
+
+    position:relative;
 }
+
+/* Orange underline animation */
+
+.section-title h2::after,
+.campus-title::after,
+.college-title::after,
+.trust-title::after,
+.leaders-main-title::after{
+
+    content:'';
+
+    position:absolute;
+
+    left:0;
+    bottom:-10px;
+
+    width:0;
+
+    height:4px;
+
+    background:#F97316;
+
+    transition:1s ease;
+}
+
+.reveal.active .section-title h2::after,
+.reveal.active .campus-title::after,
+.reveal.active .college-title::after,
+.reveal.active .trust-title::after{
+
+    width:120px;
+}
+    .hero-image{
+
+    transition:.5s;
+}
+
+.hero-image:hover{
+
+    transform:scale(1.03);
+}
+    .stat-box{
+
+    transition:.3s;
+}
+
+.stat-box:hover{
+
+    transform:translateY(-8px);
+}
+    
 </style>
 </head>
 
@@ -2793,7 +2853,7 @@ PU COLLEGE
     </div>
 
 </section>
-<section class="leaders-heading">
+<section class="leaders-heading reveal">
 
     <p class="leaders-small-title">
         OUR LEADERSHIP
@@ -2836,7 +2896,7 @@ PU COLLEGE
     </p>
 
 </div>
-<div class="team-row">
+<div class="team-row reveal">
 
     <div class="team-member"
          onclick="openPopup('admin')">
