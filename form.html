@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admission Form</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#FAF8F5;
+padding:20px;
+}
+
+.form-container{
+
+max-width:800px;
+
+margin:40px auto;
+
+background:#fff;
+
+border:2px solid #F97316;
+
+padding:30px;
+
+box-shadow:8px 8px 0px #4C1D95;
+}
+
+.small-title{
+
+text-align:center;
+
+letter-spacing:5px;
+
+color:#F97316;
+
+font-size:14px;
+
+font-weight:700;
+}
+
+.main-title{
+
+font-family:'Anton',sans-serif;
+
+font-size:60px;
+
+line-height:1;
+
+text-align:center;
+
+color:#4C1D95;
+
+margin:15px 0 35px;
+}
+
+.input-group{
+
+margin-bottom:18px;
+}
+
+label{
+
+display:block;
+
+margin-bottom:8px;
+
+font-weight:600;
+
+color:#222;
+}
+
+input,
+textarea,
+select{
+
+width:100%;
+
+padding:14px;
+
+border:2px solid #ddd;
+
+font-family:'Poppins',sans-serif;
+
+font-size:15px;
+
+outline:none;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+
+border-color:#F97316;
+}
+
+button{
+
+width:100%;
+
+background:#F97316;
+
+color:white;
+
+border:none;
+
+padding:16px;
+
+font-size:16px;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.3s;
+}
+
+button:hover{
+
+background:#e9670c;
+}
+
+.hidden{
+
+display:none;
+}
+
+@media(max-width:768px){
+
+.main-title{
+
+font-size:42px;
+}
+
+.form-container{
+
+padding:20px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="form-container">
+
+<p class="small-title">
+ADMISSIONS OPEN 2026-27
+</p>
+
+<h1 class="main-title">
+APPLY NOW
+</h1>
+
+<form action="success.html">
+
+<div class="input-group">
+
+<label>Student Name</label>
+
+<input type="text" required>
+
+</div>
+
+<div class="input-group">
+
+<label>Phone Number</label>
+
+<input type="tel" required>
+
+</div>
+
+<div class="input-group">
+
+<label>Alternate Phone Number</label>
+
+<input type="tel">
+
+</div>
+
+<div class="input-group">
+
+<label>Address</label>
+
+<textarea rows="3" required></textarea>
+
+</div>
+
+<div class="input-group">
+
+<label>Applying For</label>
+
+<select id="gradeSelect" onchange="checkPUC()" required>
+
+<option value="">Select Grade</option>
+
+<option>Nursery</option>
+<option>LKG</option>
+<option>UKG</option>
+
+<option>1st Grade</option>
+<option>2nd Grade</option>
+<option>3rd Grade</option>
+<option>4th Grade</option>
+<option>5th Grade</option>
+<option>6th Grade</option>
+<option>7th Grade</option>
+<option>8th Grade</option>
+<option>9th Grade</option>
+<option>10th Grade</option>
+
+<option value="1st PUC">1st PUC</option>
+<option value="2nd PUC">2nd PUC</option>
+
+</select>
+
+</div>
+
+<div id="streamSection" class="hidden">
+
+<div class="input-group">
+
+<label>Stream</label>
+
+<select id="streamSelect" onchange="checkCourse()">
+
+<option value="">Select Stream</option>
+
+<option value="Science">Science</option>
+
+<option value="Commerce">Commerce</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div id="courseSection" class="hidden">
+
+<div class="input-group">
+
+<label>Course</label>
+
+<select id="courseSelect">
+
+</select>
+
+</div>
+
+</div>
+
+<div class="input-group">
+
+<label>Last School / College Studied</label>
+
+<input type="text" required>
+
+</div>
+
+<button type="submit">
+SUBMIT APPLICATION
+</button>
+
+</form>
+
+</div>
+
+<script>
+
+function checkPUC(){
+
+let grade =
+document.getElementById("gradeSelect").value;
+
+if(
+grade=="1st PUC" ||
+grade=="2nd PUC"
+){
+
+document.getElementById("streamSection")
+.style.display="block";
+
+}else{
+
+document.getElementById("streamSection")
+.style.display="none";
+
+document.getElementById("courseSection")
+.style.display="none";
+
+}
+
+}
+
+function checkCourse(){
+
+let stream =
+document.getElementById("streamSelect").value;
+
+let course =
+document.getElementById("courseSelect");
+
+course.innerHTML="";
+
+if(stream=="Science"){
+
+document.getElementById("courseSection")
+.style.display="block";
+
+course.innerHTML=`
+
+<option>PCMB</option>
+<option>PCMC</option>
+
+`;
+
+}
+
+else if(stream=="Commerce"){
+
+document.getElementById("courseSection")
+.style.display="block";
+
+course.innerHTML=`
+
+<option>CEBA</option>
+
+`;
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
+
