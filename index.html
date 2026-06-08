@@ -2401,22 +2401,22 @@ PU COLLEGE
 <section class="stats-section">
 
     <div class="stat-box">
-        <h2>700+</h2>
+        <h2 class="counter" data-target="700">0</h2>
         <p>Students</p>
     </div>
 
     <div class="stat-box">
-        <h2>40+</h2>
+        <h2 class="counter" data-target="50">0</h2>
         <p>Faculty</p>
     </div>
 
     <div class="stat-box">
-        <h2>5+</h2>
+        <h2 class="counter" data-target="5">0</h2>
         <p>Laboratories</p>
     </div>
 
     <div class="stat-box">
-        <h2>95%</h2>
+        <h2 class="counter-percent" data-target="95">0</h2>
         <p>Results</p>
     </div>
 
@@ -3451,5 +3451,65 @@ function closePopup(){
     </div>
 
 </footer>
+    <script>
+
+const counters = document.querySelectorAll('.counter');
+const percentCounters = document.querySelectorAll('.counter-percent');
+
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+const counter = entry.target;
+
+const target = +counter.getAttribute('data-target');
+
+let count = 0;
+
+const speed = target/80;
+
+const updateCounter = ()=>{
+
+if(count < target){
+
+count += speed;
+
+counter.innerText = Math.ceil(count);
+
+requestAnimationFrame(updateCounter);
+
+}else{
+
+counter.innerText = target + '+';
+
+}
+
+};
+
+updateCounter();
+
+observer.unobserve(counter);
+
+}
+
+});
+
+},{threshold:.5});
+
+counters.forEach(counter=>{
+observer.observe(counter);
+});
+
+percentCounters.forEach(counter=>{
+
+observer.observe(counter);
+
+counter.isPercent = true;
+
+});
+
+    </script>
 </body>
 </html>
