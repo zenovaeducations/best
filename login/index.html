@@ -1,50 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Login | BEST International English School & PU College</title>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Login | BEST International English School & PU College
+    </title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
-    <link rel="stylesheet" href="login.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="login.css"
+    >
+
 </head>
+
 
 <body>
 
+
 <main class="login-page">
 
+
     <!-- LEFT SIDE -->
-    <section class="login-visual">
 
-        <div class="visual-overlay"></div>
+    <section class="login-left">
 
-        <div class="visual-content">
+        <div class="left-overlay"></div>
+
+        <div class="left-content">
+
 
             <div class="brand">
 
-                <span class="brand-best">BEST</span>
+                <div class="brand-best">
+                    BEST
+                </div>
 
-                <span class="brand-line"></span>
+                <div class="brand-line"></div>
 
-                <div>
+                <div class="brand-text">
+
                     <strong>
                         INTERNATIONAL<br>
                         ENGLISH SCHOOL
                     </strong>
 
-                    <small>& PU COLLEGE</small>
+                    <span>
+                        & PU COLLEGE
+                    </span>
+
                 </div>
 
             </div>
 
+
             <p class="eyebrow">
-                WELCOME BACK
+                STUDENT PORTAL
             </p>
+
 
             <h1>
                 YOUR<br>
@@ -52,9 +85,13 @@
                 STARTS HERE.
             </h1>
 
-            <p class="visual-text">
-                Access your academic journey, learning resources,
-                announcements and student services.
+
+            <p class="description">
+
+                Access your academic journey,
+                learning resources and student
+                services through the BEST portal.
+
             </p>
 
         </div>
@@ -62,12 +99,19 @@
     </section>
 
 
+
     <!-- RIGHT SIDE -->
-    <section class="login-panel">
+
+    <section class="login-right">
+
 
         <div class="login-box">
 
-            <a href="../index.html" class="back-home">
+
+            <a
+                href="../index.html"
+                class="back-button"
+            >
                 ← Back to website
             </a>
 
@@ -80,16 +124,18 @@
                     BEST
                 </div>
 
-                <div class="mobile-brand-text">
+                <div class="mobile-line"></div>
+
+                <div>
 
                     <strong>
                         INTERNATIONAL<br>
                         ENGLISH SCHOOL
                     </strong>
 
-                    <small>
+                    <span>
                         & PU COLLEGE
-                    </small>
+                    </span>
 
                 </div>
 
@@ -98,9 +144,9 @@
 
             <!-- LOGIN HEADING -->
 
-            <div class="login-heading">
+            <div class="heading">
 
-                <p class="small-title">
+                <p>
                     SECURE ACCESS
                 </p>
 
@@ -108,128 +154,68 @@
                     LOGIN NOW
                 </h2>
 
-                <p>
+                <span>
                     Sign in to continue to your portal.
+                </span>
+
+            </div>
+
+
+            <!-- GOOGLE LOGIN -->
+
+            <button
+                type="button"
+                id="googleLogin"
+                class="google-login"
+            >
+
+                <span class="google-icon">
+                    G
+                </span>
+
+                <span>
+                    Continue with Google
+                </span>
+
+            </button>
+
+
+            <div
+                id="message"
+                class="message"
+            ></div>
+
+
+            <div class="security-note">
+
+                <span class="lock">
+                    🔒
+                </span>
+
+                <p>
+                    Your login is securely handled
+                    by Google and Firebase.
                 </p>
 
             </div>
 
 
-            <!-- LOGIN FORM -->
+            <p class="footer-text">
 
-            <form id="loginForm">
+                © 2026 BEST International English
+                School & PU College
 
-                <label for="email">
-                    Email Address
-                </label>
-
-                <input
-                    type="email"
-                    id="email"
-                    placeholder="Enter your email"
-                    autocomplete="email"
-                    required
-                >
-
-
-                <label for="password">
-                    Password
-                </label>
-
-                <div class="password-wrap">
-
-                    <input
-                        type="password"
-                        id="password"
-                        placeholder="Enter your password"
-                        autocomplete="current-password"
-                        required
-                    >
-
-                    <button
-                        type="button"
-                        id="togglePassword"
-                        class="password-toggle"
-                    >
-                        SHOW
-                    </button>
-
-                </div>
-
-
-                <div class="form-row">
-
-                    <label class="remember">
-
-                        <input
-                            type="checkbox"
-                            id="rememberMe"
-                        >
-
-                        <span>
-                            Remember me
-                        </span>
-
-                    </label>
-
-
-                    <button
-                        type="button"
-                        id="forgotPassword"
-                        class="forgot-btn"
-                    >
-                        Forgot password?
-                    </button>
-
-                </div>
-
-
-                <button
-                    type="submit"
-                    class="login-submit"
-                    id="loginBtn"
-                >
-                    LOGIN
-                </button>
-
-
-                <div class="divider">
-                    <span>OR</span>
-                </div>
-
-
-                <button
-                    type="button"
-                    class="google-btn"
-                    id="googleLogin"
-                >
-
-                    <span class="google-icon">
-                        G
-                    </span>
-
-                    Continue with Google
-
-                </button>
-
-
-                <p
-                    id="message"
-                    class="message"
-                ></p>
-
-            </form>
-
-
-            <p class="login-footer">
-                © 2026 BEST International English School & PU College
             </p>
+
 
         </div>
 
+
     </section>
 
+
 </main>
+
 
 
 <script
@@ -237,5 +223,7 @@
     src="login.js"
 ></script>
 
+
 </body>
+
 </html>
