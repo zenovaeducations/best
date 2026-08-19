@@ -171,7 +171,7 @@ googleLogin.addEventListener(
                 () => {
 
                     window.location.replace(
-                        "../waiting/index.html"
+                        "../waiting/"
                     );
 
                 },
