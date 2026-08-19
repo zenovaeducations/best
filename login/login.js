@@ -130,8 +130,7 @@ googleLogin.addEventListener(
 
             setTimeout(() => {
 
-                window.location.href =
-                    "../waiting";
+                window.location.href ="../waiting";
 
             }, 1000);
 
