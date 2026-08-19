@@ -5,70 +5,93 @@ import {
 
 import {
     getAuth,
-    signInWithEmailAndPassword,
     GoogleAuthProvider,
     signInWithRedirect,
-    getRedirectResult,
-    sendPasswordResetEmail,
-    setPersistence,
-    browserLocalPersistence,
-    browserSessionPersistence
+    getRedirectResult
 } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
 
-import firebaseConfig from "./firebase-config.js";
+
+
+/* =================================
+   FIREBASE CONFIG
+================================= */
+
+const firebaseConfig = {
+
+    apiKey:
+        "AIzaSyAxG3Qhxj2hYQqQfXTB8MFR9jaL9bu3KiY",
+
+    authDomain:
+        "best-6dc7e.firebaseapp.com",
+
+    projectId:
+        "best-6dc7e",
+
+    storageBucket:
+        "best-6dc7e.firebasestorage.app",
+
+    messagingSenderId:
+        "790995369457",
+
+    appId:
+        "1:790995369457:web:bafb5e41da8af071d9d850",
+
+    measurementId:
+        "G-1BE86M53DW"
+
+};
 
 
 
-/* INITIALIZE FIREBASE */
+/* =================================
+   INITIALIZE FIREBASE
+================================= */
 
-const app = initializeApp(firebaseConfig);
-
-const auth = getAuth(app);
-
+const app =
+    initializeApp(firebaseConfig);
 
 
-/* ELEMENTS */
+const auth =
+    getAuth(app);
 
-const loginForm =
-    document.getElementById("loginForm");
 
-const emailInput =
-    document.getElementById("email");
 
-const passwordInput =
-    document.getElementById("password");
-
-const rememberMe =
-    document.getElementById("rememberMe");
-
-const loginBtn =
-    document.getElementById("loginBtn");
+/* =================================
+   ELEMENTS
+================================= */
 
 const googleLogin =
-    document.getElementById("googleLogin");
+    document.getElementById(
+        "googleLogin"
+    );
 
-const forgotPassword =
-    document.getElementById("forgotPassword");
-
-const togglePassword =
-    document.getElementById("togglePassword");
 
 const message =
-    document.getElementById("message");
+    document.getElementById(
+        "message"
+    );
 
 
 
-/* MESSAGE */
+/* =================================
+   MESSAGE
+================================= */
 
-function showMessage(text, type = "") {
+function showMessage(
+    text,
+    type = ""
+){
 
     message.textContent = text;
 
-    message.className = "message";
+    message.className =
+        "message";
 
     if(type){
 
-        message.classList.add(type);
+        message.classList.add(
+            type
+        );
 
     }
 
@@ -76,226 +99,45 @@ function showMessage(text, type = "") {
 
 
 
-/* LOADING */
-
-function setLoading(isLoading){
-
-    loginBtn.disabled = isLoading;
-
-    googleLogin.disabled = isLoading;
-
-    loginBtn.textContent =
-        isLoading
-            ? "LOGGING IN..."
-            : "LOGIN";
-
-}
-
-
-
-/* SHOW / HIDE PASSWORD */
-
-togglePassword.addEventListener(
-    "click",
-    () => {
-
-        const isPassword =
-            passwordInput.type === "password";
-
-        passwordInput.type =
-            isPassword
-                ? "text"
-                : "password";
-
-        togglePassword.textContent =
-            isPassword
-                ? "HIDE"
-                : "SHOW";
-
-    }
-);
-
-
-
-/* EMAIL + PASSWORD LOGIN */
-
-loginForm.addEventListener(
-    "submit",
-    async (event) => {
-
-        event.preventDefault();
-
-
-        const email =
-            emailInput.value.trim();
-
-        const password =
-            passwordInput.value;
-
-
-        if(!email || !password){
-
-            showMessage(
-                "Please enter your email and password.",
-                "error"
-            );
-
-            return;
-        }
-
-
-        setLoading(true);
-
-        showMessage("");
-
-
-        try{
-
-            const persistence =
-                rememberMe.checked
-                    ? browserLocalPersistence
-                    : browserSessionPersistence;
-
-
-            await setPersistence(
-                auth,
-                persistence
-            );
-
-
-            await signInWithEmailAndPassword(
-                auth,
-                email,
-                password
-            );
-
-
-            showMessage(
-                "Login successful. Redirecting...",
-                "success"
-            );
-
-
-            /*
-                TEMPORARY DASHBOARD PATH
-
-                We will change this when
-                we build the actual dashboard.
-            */
-
-            setTimeout(
-                () => {
-
-                    window.location.href =
-                        "../dashboard/index.html";
-
-                },
-                800
-            );
-
-
-        }
-
-        catch(error){
-
-            console.error(error);
-
-
-            let errorMessage =
-                "Unable to login. Please check your details.";
-
-
-            if(
-
-                error.code ===
-                "auth/invalid-credential"
-
-                ||
-
-                error.code ===
-                "auth/wrong-password"
-
-                ||
-
-                error.code ===
-                "auth/user-not-found"
-
-            ){
-
-                errorMessage =
-                    "Invalid email or password.";
-
-            }
-
-
-            else if(
-
-                error.code ===
-                "auth/too-many-requests"
-
-            ){
-
-                errorMessage =
-                    "Too many attempts. Please try again later.";
-
-            }
-
-
-            else if(
-
-                error.code ===
-                "auth/invalid-email"
-
-            ){
-
-                errorMessage =
-                    "Please enter a valid email address.";
-
-            }
-
-
-            showMessage(
-                errorMessage,
-                "error"
-            );
-
-
-            setLoading(false);
-
-        }
-
-    }
-);
-
-
-
-/* GOOGLE LOGIN */
-
-/* GOOGLE LOGIN */
+/* =================================
+   GOOGLE LOGIN
+================================= */
 
 googleLogin.addEventListener(
     "click",
     async () => {
 
-        try {
+        try{
 
-            setLoading(true);
+            googleLogin.disabled =
+                true;
 
-            showMessage("");
+            googleLogin.innerHTML =
+                "OPENING GOOGLE...";
+
 
             const provider =
                 new GoogleAuthProvider();
 
+
+            /*
+                Always show the
+                Google account selector.
+            */
+
             provider.setCustomParameters({
-                prompt: "select_account"
+
+                prompt:
+                    "select_account"
+
             });
 
-            await setPersistence(
-                auth,
-                rememberMe.checked
-                    ? browserLocalPersistence
-                    : browserSessionPersistence
-            );
+
+            /*
+                Redirect is used instead
+                of popup because it works
+                better on mobile.
+            */
 
             await signInWithRedirect(
                 auth,
@@ -304,139 +146,96 @@ googleLogin.addEventListener(
 
         }
 
-        catch(error) {
-
-            console.error(error);
-
-            showMessage(
-                "Google login could not be started.",
-                "error"
-            );
-
-            setLoading(false);
-
-        }
-
-    }
-);
-
-
-/* FORGOT PASSWORD */
-
-forgotPassword.addEventListener(
-    "click",
-    async () => {
-
-        const email =
-            emailInput.value.trim();
-
-
-        if(!email){
-
-            showMessage(
-                "Enter your email first, then click Forgot password.",
-                "error"
-            );
-
-            emailInput.focus();
-
-            return;
-        }
-
-
-        try{
-
-            await sendPasswordResetEmail(
-                auth,
-                email
-            );
-
-
-            showMessage(
-                "Password reset email sent. Check your inbox.",
-                "success"
-            );
-
-        }
-
-
         catch(error){
 
             console.error(error);
 
-
-            if(
-                error.code ===
-                "auth/user-not-found"
-            ){
-
-                showMessage(
-                    "No account was found with this email.",
-                    "error"
-                );
-
-            }
+            showMessage(
+                "Unable to open Google login. Please try again.",
+                "error"
+            );
 
 
-            else if(
-                error.code ===
-                "auth/invalid-email"
-            ){
-
-                showMessage(
-                    "Please enter a valid email address.",
-                    "error"
-                );
-
-            }
+            googleLogin.disabled =
+                false;
 
 
-            else{
+            googleLogin.innerHTML = `
 
-                showMessage(
-                    "Unable to send reset email. Please try again.",
-                    "error"
-                );
+                <span class="google-icon">
+                    G
+                </span>
 
-            }
+                <span>
+                    Continue with Google
+                </span>
+
+            `;
 
         }
 
     }
 );
-/* GOOGLE REDIRECT RESULT */
 
-try {
+
+
+/* =================================
+   GOOGLE REDIRECT RESULT
+================================= */
+
+try{
 
     const result =
-        await getRedirectResult(auth);
+        await getRedirectResult(
+            auth
+        );
 
-    if(result && result.user) {
+
+    if(
+        result &&
+        result.user
+    ){
 
         showMessage(
-            "Google login successful. Redirecting...",
+            "Login successful. Redirecting...",
             "success"
         );
 
-        setTimeout(() => {
 
-            window.location.href =
-                "../dashboard/index.html";
+        /*
+            TEMPORARY LOCATION.
 
-        }, 800);
+            We will replace this
+            after creating the
+            actual BEST dashboard.
+        */
+
+        setTimeout(
+            () => {
+
+                window.location.href =
+                    "../dashboard/index.html";
+
+            },
+            1000
+        );
 
     }
 
 }
-catch(error) {
+
+catch(error){
 
     console.error(error);
+
 
     showMessage(
         "Google login failed. Please try again.",
         "error"
     );
 
-    setLoading(false);
+
+    googleLogin.disabled =
+        false;
 
 }
