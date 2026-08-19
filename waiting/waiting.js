@@ -2,12 +2,10 @@ import {
     initializeApp
 } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
 
-
 import {
     getAuth,
     onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
-
 
 
 /* =================================
@@ -40,7 +38,6 @@ const firebaseConfig = {
 };
 
 
-
 /* =================================
    INITIALIZE FIREBASE
 ================================= */
@@ -48,10 +45,8 @@ const firebaseConfig = {
 const app =
     initializeApp(firebaseConfig);
 
-
 const auth =
     getAuth(app);
-
 
 
 /* =================================
@@ -59,40 +54,33 @@ const auth =
 ================================= */
 
 const studentName =
-    document.getElementById(
-        "studentName"
-    );
-
+    document.getElementById("studentName");
 
 const studentEmail =
-    document.getElementById(
-        "studentEmail"
-    );
-
+    document.getElementById("studentEmail");
 
 
 /* =================================
-   CHECK LOGIN
+   AUTH CHECK
 ================================= */
 
 onAuthStateChanged(
     auth,
     (user) => {
 
-
         /*
-            NO USER LOGGED IN
-
-            Someone directly opened:
-
-            /waiting/index.html
-
-            without logging in.
-
-            Send them home.
+            Firebase has now checked
+            the saved login session.
         */
 
-        if(!user){
+
+        if (!user) {
+
+            /*
+                No authenticated user.
+
+                Send back to website.
+            */
 
             window.location.replace(
                 "../index.html"
@@ -103,30 +91,25 @@ onAuthStateChanged(
         }
 
 
-
-        /* =========================
-           USER IS LOGGED IN
-        ========================= */
-
-
         /*
-            Google displayName
-            example:
-
-            "Manjunath"
-
-            If Google doesn't provide
-            a name, use "Student".
+            USER IS LOGGED IN
         */
+
+
+        console.log(
+            "Authenticated user:",
+            user
+        );
+
+
+        /* NAME */
 
         studentName.textContent =
             user.displayName ||
             "Student";
 
 
-        /*
-            Show Google email
-        */
+        /* EMAIL */
 
         studentEmail.textContent =
             user.email ||
