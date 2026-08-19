@@ -1,0 +1,641 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#FAF8F5;
+    color:#111;
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.campus-hero{
+    width:92%;
+    max-width:1200px;
+    margin:80px auto 50px;
+    text-align:center;
+}
+
+.campus-small{
+    color:#F97316;
+    letter-spacing:5px;
+    font-size:14px;
+    font-weight:700;
+}
+
+.campus-title{
+    font-family:'Anton',sans-serif;
+    font-size:78px;
+    line-height:.95;
+    color:#4C1D95;
+    margin:18px 0;
+}
+
+.campus-description{
+    max-width:650px;
+    margin:auto;
+    color:#666;
+    line-height:1.9;
+    font-size:16px;
+}
+
+.campus-btn{
+    display:inline-block;
+    margin-top:28px;
+    background:#F97316;
+    color:white;
+    text-decoration:none;
+    padding:14px 30px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.campus-btn:hover{
+    background:#4C1D95;
+    transform:translateY(-3px);
+}
+
+
+/* =========================================
+   COVER
+========================================= */
+
+.campus-cover{
+    width:92%;
+    max-width:1250px;
+    margin:50px auto 100px;
+    border:2px solid #F97316;
+    box-shadow:10px 10px 0px #4C1D95;
+    overflow:hidden;
+}
+
+.campus-cover img{
+    width:100%;
+    display:block;
+}
+
+
+/* =========================================
+   COMMON SECTION
+========================================= */
+
+.campus-life,
+.academic-spaces,
+.student-life,
+.admin-block{
+    width:92%;
+    max-width:1200px;
+    margin:110px auto;
+}
+
+.section-small{
+    text-align:center;
+    color:#F97316;
+    letter-spacing:5px;
+    font-size:14px;
+    font-weight:700;
+}
+
+.section-title{
+    text-align:center;
+    font-family:'Anton',sans-serif;
+    color:#4C1D95;
+    font-size:58px;
+    line-height:.95;
+    margin:18px 0 60px;
+}
+
+
+/* =========================================
+   EVENT CARDS
+========================================= */
+
+.event-card{
+    margin-bottom:75px;
+    border:2px solid #F97316;
+    background:white;
+    padding:25px;
+    box-shadow:9px 9px 0px #4C1D95;
+    transition:.35s;
+}
+
+.event-card:hover{
+    transform:translateY(-5px);
+}
+
+.event-top{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:20px;
+    margin-bottom:25px;
+}
+
+.event-label{
+    color:#F97316;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:3px;
+    margin-bottom:8px;
+}
+
+.event-header{
+    font-family:'Anton',sans-serif;
+    color:#4C1D95;
+    font-size:38px;
+    line-height:1;
+}
+
+.event-year{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    min-width:70px;
+    height:70px;
+
+    background:#4C1D95;
+    color:white;
+
+    font-family:'Anton',sans-serif;
+    font-size:20px;
+}
+
+
+/* =========================================
+   EVENT GALLERY
+========================================= */
+
+.event-gallery{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:10px;
+}
+
+.event-gallery img{
+    width:100%;
+    height:190px;
+    object-fit:cover;
+    display:block;
+    transition:.35s;
+}
+
+.event-gallery img:hover{
+    transform:scale(1.02);
+}
+
+.event-gallery .event-main-image{
+    grid-row:span 2;
+    height:390px;
+}
+
+
+/* =========================================
+   EVENT FOOTER
+========================================= */
+
+.event-footer{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+
+    margin-top:22px;
+    padding-top:18px;
+
+    border-top:1px solid #eee;
+}
+
+.event-footer p{
+    color:#666;
+    line-height:1.7;
+    font-size:14px;
+}
+
+.event-status{
+    flex-shrink:0;
+
+    border:2px solid #F97316;
+    color:#F97316;
+
+    padding:8px 13px;
+
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.election-card{
+    box-shadow:9px 9px 0px #F97316;
+}
+
+.election-card .event-year{
+    background:#F97316;
+}
+
+
+/* =========================================
+   ACADEMIC SPACES
+========================================= */
+
+.space-card{
+    margin-bottom:35px;
+
+    border:2px solid #F97316;
+    background:white;
+
+    box-shadow:9px 9px 0px #4C1D95;
+
+    overflow:hidden;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    transition:.35s;
+}
+
+.space-card:hover{
+    transform:translateY(-5px);
+}
+
+.space-card:nth-child(even){
+    grid-template-columns:1fr 1fr;
+}
+
+.space-card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    display:block;
+}
+
+.space-content{
+    padding:35px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.space-number{
+    color:#F97316;
+    font-weight:700;
+    letter-spacing:2px;
+    margin-bottom:10px;
+}
+
+.space-content h3{
+    color:#4C1D95;
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.space-content p:last-child{
+    color:#555;
+    line-height:1.8;
+}
+
+
+/* =========================================
+   STUDENT LIFE
+========================================= */
+
+.activity-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.activity-box{
+    border:2px solid #F97316;
+    background:white;
+
+    box-shadow:7px 7px 0px #4C1D95;
+
+    overflow:hidden;
+
+    transition:.35s;
+}
+
+.activity-box:hover{
+    transform:translateY(-6px);
+}
+
+.activity-box img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+}
+
+.activity-content{
+    padding:18px;
+}
+
+.activity-content span{
+    color:#F97316;
+    font-size:12px;
+    font-weight:700;
+}
+
+.activity-content h3{
+    color:#4C1D95;
+    margin-top:5px;
+    font-size:20px;
+}
+
+
+/* =========================================
+   ADMINISTRATIVE BLOCK
+========================================= */
+
+.admin-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.admin-card{
+    background:white;
+    border:2px solid #F97316;
+    box-shadow:7px 7px 0px #4C1D95;
+    overflow:hidden;
+    transition:.35s;
+}
+
+.admin-card:hover{
+    transform:translateY(-6px);
+}
+
+.admin-card:last-child{
+    grid-column:span 2;
+    max-width:50%;
+    margin:auto;
+}
+
+.admin-card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    display:block;
+}
+
+.admin-content{
+    padding:18px;
+}
+
+.admin-content span{
+    color:#F97316;
+    font-size:12px;
+    font-weight:700;
+}
+
+.admin-content h3{
+    color:#4C1D95;
+    margin-top:5px;
+    font-size:20px;
+}
+
+
+/* =========================================
+   ENDING
+========================================= */
+
+.campus-ending{
+    width:92%;
+    max-width:1000px;
+    margin:150px auto;
+    text-align:center;
+}
+
+.ending-title{
+    font-family:'Anton',sans-serif;
+    font-size:65px;
+    line-height:.95;
+    color:#4C1D95;
+    margin:18px 0;
+}
+
+.ending-text{
+    max-width:650px;
+    margin:auto;
+    color:#666;
+    line-height:2;
+    font-size:16px;
+}
+
+.ending-tagline{
+    margin-top:30px;
+    color:#F97316;
+    font-size:38px;
+    font-weight:700;
+    line-height:1.2;
+}
+
+.ending-buttons{
+    margin-top:40px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.back-home-btn,
+.apply-btn-campus{
+    display:inline-block;
+    text-decoration:none;
+    padding:15px 28px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.back-home-btn{
+    background:#4C1D95;
+    color:white;
+}
+
+.apply-btn-campus{
+    background:#F97316;
+    color:white;
+}
+
+.back-home-btn:hover,
+.apply-btn-campus:hover{
+    transform:translateY(-3px);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:768px){
+
+    .campus-hero{
+        margin-top:50px;
+    }
+
+    .campus-title{
+        font-size:52px;
+    }
+
+    .campus-description{
+        font-size:14px;
+    }
+
+    .section-title{
+        font-size:42px;
+        margin-bottom:45px;
+    }
+
+
+    /* EVENTS */
+
+    .event-card{
+        padding:16px;
+        box-shadow:6px 6px 0px #4C1D95;
+    }
+
+    .event-top{
+        align-items:flex-start;
+    }
+
+    .event-header{
+        font-size:28px;
+    }
+
+    .event-year{
+        min-width:55px;
+        height:55px;
+        font-size:16px;
+    }
+
+    .event-gallery{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .event-gallery .event-main-image{
+        grid-column:span 2;
+        grid-row:auto;
+        height:260px;
+    }
+
+    .event-gallery img{
+        height:150px;
+    }
+
+    .event-footer{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+
+    /* ACADEMIC */
+
+    .space-card,
+    .space-card:nth-child(even){
+        grid-template-columns:1fr;
+    }
+
+    .space-card img{
+        height:230px;
+    }
+
+    .space-content{
+        padding:25px;
+    }
+
+    .space-content h3{
+        font-size:25px;
+    }
+
+
+    /* STUDENT LIFE */
+
+    .activity-grid{
+        grid-template-columns:1fr;
+    }
+
+    .activity-box img{
+        height:210px;
+    }
+
+
+    /* ADMIN */
+
+    .admin-grid{
+        grid-template-columns:1fr;
+    }
+
+    .admin-card:last-child{
+        grid-column:auto;
+        max-width:none;
+    }
+
+    .admin-card img{
+        height:210px;
+    }
+
+
+    /* END */
+
+    .ending-title{
+        font-size:45px;
+    }
+
+    .ending-tagline{
+        font-size:28px;
+    }
+
+}
+
+
+@media(max-width:430px){
+
+    .campus-title{
+        font-size:44px;
+    }
+
+    .section-title{
+        font-size:36px;
+    }
+
+    .event-header{
+        font-size:25px;
+    }
+
+    .event-label{
+        letter-spacing:2px;
+    }
+
+    .event-gallery .event-main-image{
+        height:220px;
+    }
+
+    .event-gallery img{
+        height:130px;
+    }
+
+    .ending-title{
+        font-size:39px;
+    }
+
+}
