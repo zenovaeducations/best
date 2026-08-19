@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Login | BEST International English School</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;500;600;700&family=Allura&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#FAF8F5;
+    color:#111;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:25px;
+}
+
+/* MAIN CONTAINER */
+
+.login-page{
+    width:100%;
+    max-width:900px;
+    background:#ffffff;
+    border:2px solid #F97316;
+    box-shadow:12px 12px 0px #4C1D95;
+    padding:70px 40px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+}
+
+/* TOP BRAND */
+
+.brand{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    margin-bottom:55px;
+}
+
+.best{
+    font-family:'Anton',sans-serif;
+    font-size:70px;
+    line-height:.8;
+    color:#4C1D95;
+}
+
+.brand-line{
+    width:3px;
+    height:70px;
+    background:#d0d0d0;
+}
+
+.brand-text{
+    text-align:left;
+}
+
+.brand-text h2{
+    font-size:16px;
+    line-height:1.1;
+    font-weight:700;
+}
+
+.brand-text p{
+    margin-top:5px;
+    font-size:12px;
+    font-weight:500;
+}
+
+/* SMALL TITLE */
+
+.small-title{
+    color:#F97316;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:6px;
+    margin-bottom:20px;
+}
+
+/* MAIN TITLE */
+
+.main-title{
+    font-family:'Anton',sans-serif;
+    font-size:75px;
+    line-height:.95;
+    color:#4C1D95;
+    font-weight:400;
+}
+
+.main-title span{
+    color:#F97316;
+}
+
+/* MESSAGE */
+
+.message{
+    max-width:650px;
+    margin:30px auto 0;
+    color:#555;
+    font-size:16px;
+    line-height:1.9;
+}
+
+/* HIGHLIGHT */
+
+.highlight{
+    margin:35px auto;
+    max-width:600px;
+    padding:20px;
+    background:#FAF8F5;
+    border-left:5px solid #F97316;
+    color:#4C1D95;
+    font-weight:600;
+    font-size:16px;
+}
+
+/* BUTTON */
+
+.home-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    min-width:190px;
+    height:52px;
+
+    background:#4C1D95;
+    color:white;
+
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+
+    border:2px solid #4C1D95;
+
+    transition:.3s;
+}
+
+.home-btn:hover{
+    background:#F97316;
+    border-color:#F97316;
+    transform:translateY(-3px);
+}
+
+/* FOOTER */
+
+.footer-text{
+    margin-top:45px;
+    font-size:11px;
+    color:#999;
+    letter-spacing:1px;
+}
+
+/* DECORATION */
+
+.orange-circle{
+    position:absolute;
+    width:180px;
+    height:180px;
+    border:3px solid #F97316;
+    border-radius:50%;
+    top:-100px;
+    right:-80px;
+}
+
+.purple-square{
+    position:absolute;
+    width:100px;
+    height:100px;
+    background:#4C1D95;
+    bottom:-50px;
+    left:-50px;
+    transform:rotate(20deg);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    body{
+        padding:18px;
+    }
+
+    .login-page{
+        padding:50px 22px;
+        box-shadow:7px 7px 0px #4C1D95;
+    }
+
+    .brand{
+        margin-bottom:45px;
+    }
+
+    .best{
+        font-size:52px;
+    }
+
+    .brand-line{
+        height:52px;
+    }
+
+    .brand-text h2{
+        font-size:12px;
+    }
+
+    .brand-text p{
+        font-size:9px;
+    }
+
+    .small-title{
+        font-size:11px;
+        letter-spacing:4px;
+    }
+
+    .main-title{
+        font-size:52px;
+    }
+
+    .message{
+        font-size:14px;
+        line-height:1.8;
+    }
+
+    .highlight{
+        font-size:14px;
+        line-height:1.7;
+    }
+
+}
+
+@media(max-width:430px){
+
+    .login-page{
+        padding:45px 18px;
+    }
+
+    .best{
+        font-size:45px;
+    }
+
+    .brand-line{
+        height:45px;
+    }
+
+    .main-title{
+        font-size:43px;
+    }
+
+    .small-title{
+        letter-spacing:3px;
+    }
+
+    .message{
+        font-size:13px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="login-page">
+
+    <div class="orange-circle"></div>
+    <div class="purple-square"></div>
+
+    <!-- BRAND -->
+
+    <div class="brand">
+
+        <div class="best">
+            BEST
+        </div>
+
+        <div class="brand-line"></div>
+
+        <div class="brand-text">
+            <h2>
+                INTERNATIONAL<br>
+                ENGLISH SCHOOL
+            </h2>
+
+            <p>
+                & PU COLLEGE
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- MESSAGE -->
+
+    <div class="small-title">
+        WELCOME
+    </div>
+
+    <h1 class="main-title">
+        WE ARE<br>
+        <span>GETTING YOU</span><br>
+        ONBOARD.
+    </h1>
+
+
+    <p class="message">
+
+        Our online login portal is currently being prepared
+        to provide students, parents and staff with a smooth
+        and secure digital experience.
+
+    </p>
+
+
+    <div class="highlight">
+
+        🚀 We are working behind the scenes to bring
+        your digital campus experience to you.
+
+    </div>
+
+
+    <p class="message">
+
+        Kindly bear with us as we complete the onboarding
+        process. We truly appreciate your patience and
+        look forward to welcoming you soon.
+
+    </p>
+
+
+    <!-- HOME BUTTON -->
+
+    <a href="../index.html" class="home-btn">
+        GO BACK TO HOME
+    </a>
+
+
+    <div class="footer-text">
+
+        THANK YOU FOR YOUR PATIENCE · BEST INTERNATIONAL ENGLISH SCHOOL & PU COLLEGE
+
+    </div>
+
+</div>
+
+</body>
+      </html>
