@@ -226,16 +226,17 @@ try{
 
 catch(error){
 
-    console.error(error);
-
+    console.error("FULL FIREBASE ERROR:", error);
 
     showMessage(
-        "Google login failed. Please try again.",
+        error.code + " — " + error.message,
         "error"
     );
 
+    googleLogin.disabled = false;
 
-    googleLogin.disabled =
-        false;
-
+    googleLogin.innerHTML = `
+        <span class="google-icon">G</span>
+        <span>Continue with Google</span>
+    `;
 }
