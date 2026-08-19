@@ -2411,7 +2411,11 @@ header{
 
     transform:translateY(-8px);
 }
-    
+    .header-actions{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    }
 </style>
 </head>
 
@@ -2423,24 +2427,29 @@ header{
 
 <div class="header-container">
 
-<div class="logo">
+    <div class="logo">
+        <div class="best">BEST</div>
+        <div class="line"></div>
 
-<div class="best">BEST</div>
+        <div class="logo-text">
+            <h3>INTERNATIONAL<br>ENGLISH SCHOOL</h3>
+            <p>& PU COLLEGE</p>
+        </div>
+    </div>
 
-<div class="line"></div>
+    <div class="header-actions">
 
-<div class="logo-text">
-<h3>INTERNATIONAL<br>ENGLISH SCHOOL</h3>
-<p>& PU COLLEGE</p>
-</div>
+        <a href="login/index.html" class="login-btn">
+            LOGIN NOW
+        </a>
 
-</div>
+        <button class="menu-btn" onclick="openMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-<button class="menu-btn" onclick="openMenu()">
-<span></span>
-<span></span>
-<span></span>
-</button>
+    </div>
 
 </div>
 
