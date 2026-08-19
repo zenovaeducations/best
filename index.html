@@ -2416,6 +2416,66 @@ header{
     align-items:center;
     gap:18px;
     }
+    /* LOGIN NOW BUTTON */
+.header-actions{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.login-btn{
+    display:inline-flex !important;
+    align-items:center;
+    justify-content:center;
+
+    width:130px;
+    height:48px;
+
+    background:#4C1D95 !important;
+    color:#ffffff !important;
+
+    text-decoration:none !important;
+    font-family:'Poppins', sans-serif;
+    font-size:14px;
+    font-weight:600;
+
+    border:2px solid #4C1D95;
+    border-radius:0;
+
+    white-space:nowrap;
+
+    transition:all .3s ease;
+}
+
+.login-btn:hover{
+    background:#F97316 !important;
+    border-color:#F97316;
+    color:#ffffff !important;
+    transform:translateY(-2px);
+}
+    @media(max-width:768px){
+
+    .header-container{
+        padding:15px;
+    }
+
+    .header-actions{
+        gap:10px;
+    }
+
+    .login-btn{
+        width:100px;
+        height:42px;
+        font-size:12px;
+        padding:0 8px;
+    }
+
+    .menu-btn{
+        width:45px;
+        height:45px;
+    }
+
+    }
 </style>
 </head>
 
