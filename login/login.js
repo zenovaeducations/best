@@ -404,3 +404,39 @@ forgotPassword.addEventListener(
 
     }
 );
+/* GOOGLE REDIRECT RESULT */
+
+try {
+
+    const result =
+        await getRedirectResult(auth);
+
+    if(result && result.user) {
+
+        showMessage(
+            "Google login successful. Redirecting...",
+            "success"
+        );
+
+        setTimeout(() => {
+
+            window.location.href =
+                "../dashboard/index.html";
+
+        }, 800);
+
+    }
+
+}
+catch(error) {
+
+    console.error(error);
+
+    showMessage(
+        "Google login failed. Please try again.",
+        "error"
+    );
+
+    setLoading(false);
+
+}
