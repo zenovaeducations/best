@@ -5,28 +5,44 @@ import {
 import {
     getAuth,
     GoogleAuthProvider,
-    signInWithPopup
+    signInWithPopup,
+    onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
 
 
-/* ================================
+/* =================================
    FIREBASE CONFIG
-================================ */
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+================================= */
+
 const firebaseConfig = {
-  apiKey: "AIzaSyAxG3Qhxj2hYQyQfXTB8MFR9jaL9bu3KiY",
-  authDomain: "best-6dc7e.firebaseapp.com",
-  projectId: "best-6dc7e",
-  storageBucket: "best-6dc7e.firebasestorage.app",
-  messagingSenderId: "790995369457",
-  appId: "1:790995369457:web:bafb5e41da8af071d9d850",
-  measurementId: "G-1BE86M53DW"
+
+    apiKey:
+        "AIzaSyAxG3Qhxj2hYQqQfXTB8MFR9jaL9bu3KiY",
+
+    authDomain:
+        "best-6dc7e.firebaseapp.com",
+
+    projectId:
+        "best-6dc7e",
+
+    storageBucket:
+        "best-6dc7e.firebasestorage.app",
+
+    messagingSenderId:
+        "790995369457",
+
+    appId:
+        "1:790995369457:web:bafb5e41da8af071d9d850",
+
+    measurementId:
+        "G-1BE86M53DW"
+
 };
 
 
-/* ================================
+/* =================================
    INITIALIZE FIREBASE
-================================ */
+================================= */
 
 const app =
     initializeApp(firebaseConfig);
@@ -35,9 +51,9 @@ const auth =
     getAuth(app);
 
 
-/* ================================
+/* =================================
    ELEMENTS
-================================ */
+================================= */
 
 const googleLogin =
     document.getElementById("googleLogin");
@@ -46,11 +62,41 @@ const message =
     document.getElementById("message");
 
 
-/* ================================
-   MESSAGE
-================================ */
+/* =================================
+   CHECK EXISTING LOGIN
+================================= */
 
-function showMessage(text, type = "") {
+onAuthStateChanged(
+    auth,
+    (user) => {
+
+        if (user) {
+
+            /*
+                User is already logged in.
+
+                Don't show login again.
+                Send directly to waiting page.
+            */
+
+            window.location.replace(
+                "../waiting/index.html"
+            );
+
+        }
+
+    }
+);
+
+
+/* =================================
+   MESSAGE
+================================= */
+
+function showMessage(
+    text,
+    type = ""
+) {
 
     message.textContent = text;
 
@@ -65,9 +111,9 @@ function showMessage(text, type = "") {
 }
 
 
-/* ================================
+/* =================================
    GOOGLE LOGIN
-================================ */
+================================= */
 
 googleLogin.addEventListener(
     "click",
@@ -86,8 +132,9 @@ googleLogin.addEventListener(
 
 
             /*
-                Always ask Google to
-                show the account selector.
+                Always show account
+                selection when Google
+                login is actually required.
             */
 
             provider.setCustomParameters({
@@ -96,11 +143,6 @@ googleLogin.addEventListener(
 
             });
 
-
-            /*
-                Open Google account
-                selection popup.
-            */
 
             const result =
                 await signInWithPopup(
@@ -116,26 +158,28 @@ googleLogin.addEventListener(
 
 
             showMessage(
-                "Login successful!",
+                "Login successful. Redirecting...",
                 "success"
             );
 
 
             /*
-                TEMPORARY DASHBOARD
-
-                We will create this
-                later.
+                Go to waiting page.
             */
 
-            setTimeout(() => {
+            setTimeout(
+                () => {
 
-                window.location.href ="../waiting";
+                    window.location.replace(
+                        "../waiting/index.html"
+                    );
 
-            }, 1000);
-
+                },
+                500
+            );
 
         }
+
 
         catch (error) {
 
@@ -145,11 +189,6 @@ googleLogin.addEventListener(
             );
 
 
-            /*
-                SHOW THE REAL ERROR
-                ON THE SCREEN
-            */
-
             showMessage(
                 error.code +
                 " — " +
@@ -158,7 +197,8 @@ googleLogin.addEventListener(
             );
 
 
-            googleLogin.disabled = false;
+            googleLogin.disabled =
+                false;
 
 
             googleLogin.innerHTML = `
