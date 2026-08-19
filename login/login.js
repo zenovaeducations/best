@@ -6,7 +6,9 @@ import {
     getAuth,
     GoogleAuthProvider,
     signInWithPopup,
-    onAuthStateChanged
+    onAuthStateChanged,
+    setPersistence,
+    browserLocalPersistence
 } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
 
 
@@ -41,14 +43,12 @@ const firebaseConfig = {
 
 
 /* =================================
-   INITIALIZE FIREBASE
+   FIREBASE
 ================================= */
 
-const app =
-    initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
-const auth =
-    getAuth(app);
+const auth = getAuth(app);
 
 
 /* =================================
@@ -66,46 +66,31 @@ const message =
    CHECK EXISTING LOGIN
 ================================= */
 
-onAuthStateChanged(
-    auth,
-    (user) => {
+onAuthStateChanged(auth, (user) => {
 
-        if (user) {
+    if (user) {
 
-            /*
-                User is already logged in.
-
-                Don't show login again.
-                Send directly to waiting page.
-            */
-
-            window.location.replace(
-                "../waiting/index.html"
-            );
-
-        }
+        window.location.replace(
+            "../waiting/"
+        );
 
     }
-);
+
+});
 
 
 /* =================================
    MESSAGE
 ================================= */
 
-function showMessage(
-    text,
-    type = ""
-) {
+function showMessage(text, type = "") {
 
     message.textContent = text;
 
     message.className = "message";
 
     if (type) {
-
         message.classList.add(type);
-
     }
 
 }
@@ -127,20 +112,23 @@ googleLogin.addEventListener(
                 "OPENING GOOGLE...";
 
 
+            /*
+                IMPORTANT:
+                Save Firebase login locally.
+            */
+
+            await setPersistence(
+                auth,
+                browserLocalPersistence
+            );
+
+
             const provider =
                 new GoogleAuthProvider();
 
 
-            /*
-                Always show account
-                selection when Google
-                login is actually required.
-            */
-
             provider.setCustomParameters({
-
                 prompt: "select_account"
-
             });
 
 
@@ -152,7 +140,7 @@ googleLogin.addEventListener(
 
 
             console.log(
-                "Google login successful:",
+                "Logged in:",
                 result.user
             );
 
@@ -163,28 +151,17 @@ googleLogin.addEventListener(
             );
 
 
-            /*
-                Go to waiting page.
-            */
-
-            setTimeout(
-                () => {
-
-                    window.location.replace(
-                        "../waiting/"
-                    );
-
-                },
-                500
+            window.location.replace(
+                "../waiting/"
             );
 
-        }
 
+        }
 
         catch (error) {
 
             console.error(
-                "FIREBASE GOOGLE LOGIN ERROR:",
+                "GOOGLE LOGIN ERROR:",
                 error
             );
 
@@ -197,8 +174,7 @@ googleLogin.addEventListener(
             );
 
 
-            googleLogin.disabled =
-                false;
+            googleLogin.disabled = false;
 
 
             googleLogin.innerHTML = `
