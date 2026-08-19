@@ -271,97 +271,47 @@ loginForm.addEventListener(
 
 /* GOOGLE LOGIN */
 
+/* GOOGLE LOGIN */
+
 googleLogin.addEventListener(
     "click",
     async () => {
 
-        setLoading(true);
+        try {
 
-        showMessage("");
+            setLoading(true);
 
-
-        try{
+            showMessage("");
 
             const provider =
                 new GoogleAuthProvider();
 
+            provider.setCustomParameters({
+                prompt: "select_account"
+            });
 
             await setPersistence(
-
                 auth,
-
                 rememberMe.checked
                     ? browserLocalPersistence
                     : browserSessionPersistence
-
             );
 
-
-            await signInWithPopup(
+            await signInWithRedirect(
                 auth,
                 provider
             );
 
-
-            showMessage(
-                "Google login successful. Redirecting...",
-                "success"
-            );
-
-
-            setTimeout(
-                () => {
-
-                    window.location.href =
-                        "../dashboard/index.html";
-
-                },
-                800
-            );
-
-
         }
 
-        catch(error){
+        catch(error) {
 
             console.error(error);
 
-
-            if(
-                error.code ===
-                "auth/popup-closed-by-user"
-            ){
-
-                showMessage(
-                    "Google login was cancelled.",
-                    "error"
-                );
-
-            }
-
-
-            else if(
-                error.code ===
-                "auth/popup-blocked"
-            ){
-
-                showMessage(
-                    "Please allow popups for Google login.",
-                    "error"
-                );
-
-            }
-
-
-            else{
-
-                showMessage(
-                    "Google login failed. Please try again.",
-                    "error"
-                );
-
-            }
-
+            showMessage(
+                "Google login could not be started.",
+                "error"
+            );
 
             setLoading(false);
 
@@ -369,7 +319,6 @@ googleLogin.addEventListener(
 
     }
 );
-
 
 
 /* FORGOT PASSWORD */
