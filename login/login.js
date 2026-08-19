@@ -4,25 +4,16 @@ import {
 
 
 import {
-
     getAuth,
-
     signInWithEmailAndPassword,
-
     GoogleAuthProvider,
-
-    signInWithPopup,
-
+    signInWithRedirect,
+    getRedirectResult,
     sendPasswordResetEmail,
-
     setPersistence,
-
     browserLocalPersistence,
-
     browserSessionPersistence
-
 } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
-
 
 import firebaseConfig from "./firebase-config.js";
 
