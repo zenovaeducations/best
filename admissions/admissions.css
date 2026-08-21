@@ -1,0 +1,590 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#FAF8F5;
+    color:#111;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.admission-header{
+    width:100%;
+    padding:25px 5%;
+    border-bottom:1px solid #ddd;
+    background:#fff;
+}
+
+.brand{
+    display:inline-flex;
+    align-items:center;
+    gap:14px;
+    text-decoration:none;
+    color:#111;
+}
+
+.brand-best{
+    font-family:'Anton',sans-serif;
+    font-size:55px;
+    color:#4C1D95;
+}
+
+.brand-line{
+    width:3px;
+    height:55px;
+    background:#ccc;
+}
+
+.brand-text{
+    display:flex;
+    flex-direction:column;
+}
+
+.brand-text strong{
+    font-size:14px;
+    line-height:1.15;
+}
+
+.brand-text span{
+    margin-top:5px;
+    font-size:11px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.admission-hero{
+    max-width:1000px;
+    margin:80px auto 50px;
+    padding:0 25px;
+    text-align:center;
+}
+
+.small-title{
+    color:#F97316;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:6px;
+}
+
+.admission-hero h1{
+    font-family:'Anton',sans-serif;
+    font-size:78px;
+    line-height:.95;
+    color:#111;
+    margin:20px 0;
+}
+
+.admission-hero h1 span{
+    color:#4C1D95;
+}
+
+.hero-text{
+    max-width:750px;
+    margin:auto;
+    color:#666;
+    font-size:16px;
+    line-height:1.9;
+}
+
+.hero-text strong{
+    display:block;
+    color:#F97316;
+    margin-top:8px;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.status-section{
+    max-width:1050px;
+    margin:60px auto 100px;
+    padding:0 25px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.status-card{
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+    padding:25px;
+
+    background:white;
+    border:2px solid;
+
+    box-shadow:7px 7px 0 #111;
+}
+
+.status-card.completed{
+    border-color:#aaa;
+}
+
+.status-card.open{
+    border-color:#F97316;
+    box-shadow:7px 7px 0 #4C1D95;
+}
+
+.status-icon{
+    width:55px;
+    height:55px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    flex-shrink:0;
+
+    font-size:25px;
+    font-weight:700;
+
+    background:#4C1D95;
+    color:white;
+}
+
+.status-card.open .status-icon{
+    background:#F97316;
+}
+
+.status-card small{
+    color:#888;
+    font-size:10px;
+    letter-spacing:2px;
+}
+
+.status-card h3{
+    font-family:'Anton',sans-serif;
+    font-size:30px;
+    color:#4C1D95;
+}
+
+.status-card p{
+    font-size:13px;
+    color:#666;
+}
+
+.status-card.open p{
+    color:#F97316;
+    font-weight:600;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro-section{
+    max-width:850px;
+    margin:0 auto 60px;
+    padding:0 25px;
+    text-align:center;
+}
+
+.section-label{
+    color:#F97316;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:5px;
+}
+
+.intro-section h2{
+    font-family:'Anton',sans-serif;
+    color:#4C1D95;
+    font-size:55px;
+    line-height:.95;
+    margin:15px 0 25px;
+}
+
+.intro-section > p:last-child{
+    color:#666;
+    line-height:1.9;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-section{
+    width:92%;
+    max-width:1050px;
+    margin:auto;
+}
+
+.admission-form{
+    background:#fff;
+    border:2px solid #F97316;
+    padding:45px;
+
+    box-shadow:10px 10px 0 #4C1D95;
+}
+
+
+/* FORM HEADING */
+
+.form-heading{
+    display:flex;
+    align-items:center;
+    gap:18px;
+
+    margin:20px 0 30px;
+    padding-bottom:18px;
+
+    border-bottom:1px solid #eee;
+}
+
+.form-heading > span{
+    font-family:'Anton',sans-serif;
+    font-size:35px;
+    color:#F97316;
+}
+
+.form-heading h2{
+    color:#4C1D95;
+    font-size:22px;
+}
+
+.form-heading p{
+    color:#888;
+    font-size:12px;
+}
+
+
+/* GRID */
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+    margin-bottom:55px;
+}
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.input-group.full{
+    grid-column:span 2;
+}
+
+.input-group label{
+    font-size:13px;
+    font-weight:600;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea{
+    width:100%;
+
+    padding:14px;
+
+    border:2px solid #ddd;
+
+    background:#fff;
+
+    font-family:'Poppins',sans-serif;
+    font-size:14px;
+
+    outline:none;
+
+    transition:.25s;
+}
+
+.input-group textarea{
+    resize:vertical;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus{
+    border-color:#F97316;
+}
+
+
+/* =========================
+   CHECKBOXES
+========================= */
+
+.check-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+}
+
+.check-item{
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    padding:13px;
+
+    border:2px solid #eee;
+
+    cursor:pointer;
+
+    font-size:12px;
+
+    transition:.25s;
+}
+
+.check-item:hover{
+    border-color:#F97316;
+}
+
+.check-item input{
+    accent-color:#4C1D95;
+}
+
+
+/* =========================
+   CONSENT
+========================= */
+
+.consent{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+
+    margin:10px 0 25px;
+
+    color:#666;
+
+    font-size:12px;
+    line-height:1.7;
+
+    cursor:pointer;
+}
+
+.consent input{
+    margin-top:5px;
+    accent-color:#4C1D95;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.submit-btn{
+    width:100%;
+
+    border:none;
+
+    background:#4C1D95;
+    color:white;
+
+    padding:18px;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:15px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.submit-btn span{
+    margin-left:10px;
+    font-size:20px;
+}
+
+.submit-btn:hover{
+    background:#F97316;
+    transform:translateY(-2px);
+}
+
+.form-note{
+    text-align:center;
+    color:#999;
+    font-size:11px;
+    margin-top:15px;
+}
+
+
+/* =========================
+   BOTTOM BUTTONS
+========================= */
+
+.bottom-section{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+
+    margin:80px auto;
+}
+
+.home-btn,
+.campus-btn{
+    padding:14px 25px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.home-btn{
+    color:#4C1D95;
+    border:2px solid #4C1D95;
+}
+
+.campus-btn{
+    color:white;
+    background:#F97316;
+}
+
+.home-btn:hover{
+    background:#4C1D95;
+    color:white;
+}
+
+.campus-btn:hover{
+    background:#4C1D95;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    padding:25px;
+    text-align:center;
+    color:#999;
+    font-size:11px;
+    border-top:1px solid #ddd;
+}
+
+
+/* =========================
+   HIDDEN
+========================= */
+
+.hidden{
+    display:none;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .admission-header{
+        padding:18px;
+    }
+
+    .brand-best{
+        font-size:42px;
+    }
+
+    .brand-line{
+        height:42px;
+    }
+
+    .brand-text strong{
+        font-size:11px;
+    }
+
+    .brand-text span{
+        font-size:9px;
+    }
+
+
+    .admission-hero{
+        margin-top:55px;
+    }
+
+    .admission-hero h1{
+        font-size:52px;
+    }
+
+    .hero-text{
+        font-size:14px;
+    }
+
+
+    .status-section{
+        grid-template-columns:1fr;
+        margin-bottom:75px;
+    }
+
+
+    .intro-section h2{
+        font-size:40px;
+    }
+
+
+    .admission-form{
+        padding:25px 18px;
+        box-shadow:6px 6px 0 #4C1D95;
+    }
+
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .input-group.full{
+        grid-column:auto;
+    }
+
+
+    .check-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+
+    .form-heading h2{
+        font-size:18px;
+    }
+
+}
+
+
+@media(max-width:430px){
+
+    .admission-hero h1{
+        font-size:43px;
+    }
+
+    .small-title{
+        letter-spacing:4px;
+    }
+
+    .status-card{
+        padding:18px;
+    }
+
+    .status-card h3{
+        font-size:25px;
+    }
+
+    .check-grid{
+        grid-template-columns:1fr;
+    }
+
+}
