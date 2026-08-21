@@ -2476,6 +2476,40 @@ header{
     }
 
     }
+    .developer-credit{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+    margin-top:12px;
+
+    font-family:'Poppins', sans-serif;
+    font-size:10px;
+    color:#888;
+}
+
+.developer-credit img{
+    width:22px;
+    height:22px;
+    object-fit:contain;
+}
+
+.developer-credit span:last-child{
+    font-weight:600;
+    color:#666;
+}
+
+@media(max-width:600px){
+    .developer-credit{
+        font-size:9px;
+        gap:5px;
+    }
+
+    .developer-credit img{
+        width:19px;
+        height:19px;
+    }
+}
 </style>
 </head>
 
