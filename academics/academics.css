@@ -1,0 +1,788 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#FAF8F5;
+    color:#111;
+    font-family:'Poppins',sans-serif;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.academic-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:24px 5%;
+
+    background:#fff;
+    border-bottom:1px solid #ddd;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    color:#111;
+    text-decoration:none;
+}
+
+.brand-best{
+    font-family:'Anton',sans-serif;
+    font-size:52px;
+    color:#4C1D95;
+}
+
+.brand-line{
+    width:3px;
+    height:52px;
+    background:#ccc;
+}
+
+.brand-text{
+    display:flex;
+    flex-direction:column;
+}
+
+.brand-text strong{
+    font-size:13px;
+    line-height:1.15;
+}
+
+.brand-text span{
+    font-size:10px;
+    margin-top:5px;
+}
+
+.home-link{
+    color:#4C1D95;
+    text-decoration:none;
+    font-size:12px;
+    font-weight:700;
+}
+
+
+/* =========================
+   COMMON
+========================= */
+
+.section-label{
+    color:#F97316;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:4px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.academic-hero{
+    max-width:1000px;
+    margin:100px auto 120px;
+    padding:0 25px;
+    text-align:center;
+}
+
+.hero-label{
+    color:#F97316;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:6px;
+}
+
+.academic-hero h1{
+    font-family:'Anton',sans-serif;
+    font-size:82px;
+    line-height:.94;
+    margin:20px 0 30px;
+}
+
+.academic-hero h1 span{
+    color:#4C1D95;
+}
+
+.academic-hero p{
+    max-width:750px;
+    margin:auto;
+
+    color:#666;
+    font-size:15px;
+    line-height:1.9;
+}
+
+
+/* =========================
+   PHILOSOPHY
+========================= */
+
+.philosophy-section{
+    width:92%;
+    max-width:1100px;
+
+    margin:0 auto 130px;
+
+    display:grid;
+    grid-template-columns:70px 1fr 1fr;
+    gap:45px;
+
+    padding:60px 0;
+
+    border-top:2px solid #111;
+    border-bottom:1px solid #ddd;
+}
+
+.section-number{
+    font-family:'Anton',sans-serif;
+    font-size:35px;
+    color:#F97316;
+}
+
+.philosophy-content h2{
+    font-family:'Anton',sans-serif;
+    color:#4C1D95;
+    font-size:55px;
+    line-height:.95;
+    margin:18px 0 25px;
+}
+
+.large-text{
+    color:#111 !important;
+    font-size:18px !important;
+    line-height:1.7 !important;
+    margin-bottom:15px;
+}
+
+.philosophy-content > p:last-child{
+    color:#666;
+    font-size:13px;
+    line-height:1.9;
+}
+
+.philosophy-points{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.point{
+    display:grid;
+    grid-template-columns:40px 1fr;
+    gap:15px;
+}
+
+.point > strong{
+    color:#F97316;
+    font-family:'Anton',sans-serif;
+    font-size:20px;
+}
+
+.point h3{
+    font-size:14px;
+    color:#4C1D95;
+}
+
+.point p{
+    color:#777;
+    font-size:11px;
+    line-height:1.7;
+    margin-top:5px;
+}
+
+
+/* =========================
+   SCHOOL
+========================= */
+
+.school-section{
+    width:92%;
+    max-width:1100px;
+    margin:0 auto 130px;
+}
+
+.section-heading{
+    max-width:650px;
+    margin-bottom:50px;
+}
+
+.section-heading h2{
+    font-family:'Anton',sans-serif;
+    color:#4C1D95;
+    font-size:60px;
+    line-height:.95;
+    margin:18px 0;
+}
+
+.section-heading > p:last-child{
+    color:#666;
+    font-size:13px;
+    line-height:1.8;
+}
+
+.school-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.academic-card{
+    min-height:220px;
+
+    padding:28px;
+
+    background:#fff;
+
+    border:2px solid #ddd;
+
+    transition:.3s;
+}
+
+.academic-card:hover{
+    transform:translateY(-7px);
+    border-color:#F97316;
+    box-shadow:7px 7px 0 #4C1D95;
+}
+
+.academic-card span{
+    font-family:'Anton',sans-serif;
+    font-size:25px;
+    color:#F97316;
+}
+
+.academic-card h3{
+    color:#4C1D95;
+    font-size:18px;
+    margin:25px 0 12px;
+}
+
+.academic-card p{
+    color:#777;
+    font-size:12px;
+    line-height:1.8;
+}
+
+
+/* =========================
+   PU COLLEGE
+========================= */
+
+.pu-section{
+    background:#111;
+    color:#fff;
+
+    padding:100px 5% 120px;
+}
+
+.pu-heading{
+    max-width:750px;
+    margin:0 auto 65px;
+    text-align:center;
+}
+
+.pu-heading h2{
+    font-family:'Anton',sans-serif;
+    font-size:65px;
+    line-height:.95;
+    margin:18px 0 25px;
+}
+
+.pu-heading h2 span{
+    color:#F97316;
+}
+
+.pu-heading p:last-child{
+    color:#aaa;
+    font-size:13px;
+    line-height:1.8;
+}
+
+.pu-years{
+    width:92%;
+    max-width:1050px;
+
+    margin:0 auto 80px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+}
+
+.year-card{
+    display:flex;
+    gap:25px;
+
+    padding:30px;
+
+    border:1px solid #444;
+    background:#181818;
+}
+
+.year-number{
+    font-family:'Anton',sans-serif;
+    color:#F97316;
+    font-size:40px;
+}
+
+.year-card small{
+    color:#999;
+    font-size:9px;
+    letter-spacing:2px;
+}
+
+.year-card h3{
+    font-family:'Anton',sans-serif;
+    font-size:32px;
+    color:#fff;
+}
+
+.year-card p{
+    color:#aaa;
+    font-size:11px;
+    line-height:1.7;
+    margin-top:8px;
+}
+
+
+/* =========================
+   STREAMS
+========================= */
+
+.stream-section{
+    width:92%;
+    max-width:1050px;
+    margin:0 auto 55px;
+}
+
+.stream-title{
+    border-bottom:1px solid #444;
+    padding-bottom:18px;
+    margin-bottom:20px;
+}
+
+.stream-title span{
+    color:#F97316;
+    font-size:10px;
+    letter-spacing:3px;
+}
+
+.stream-title h3{
+    margin-top:6px;
+    font-family:'Anton',sans-serif;
+    font-size:28px;
+}
+
+.stream-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.stream-card{
+    padding:25px;
+
+    border:1px solid #444;
+    background:#181818;
+
+    transition:.3s;
+}
+
+.stream-card:hover{
+    border-color:#F97316;
+}
+
+.stream-card h4{
+    font-family:'Anton',sans-serif;
+    font-size:27px;
+    color:#F97316;
+}
+
+.stream-card p{
+    margin-top:8px;
+    color:#aaa;
+    font-size:11px;
+    line-height:1.7;
+}
+
+.commerce .stream-grid{
+    grid-template-columns:1fr;
+}
+
+
+/* =========================
+   FUTURE SKILLS
+========================= */
+
+.future-section{
+    width:92%;
+    max-width:1100px;
+
+    margin:130px auto;
+}
+
+.future-heading{
+    max-width:650px;
+    margin-bottom:50px;
+}
+
+.future-heading h2{
+    font-family:'Anton',sans-serif;
+    font-size:60px;
+    line-height:.95;
+    color:#111;
+    margin-top:18px;
+}
+
+.future-heading h2 span{
+    color:#4C1D95;
+}
+
+.future-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.future-card{
+    padding:28px;
+    min-height:220px;
+
+    background:#fff;
+
+    border:2px solid #ddd;
+
+    transition:.3s;
+}
+
+.future-card:hover{
+    background:#4C1D95;
+    color:#fff;
+    transform:translateY(-6px);
+}
+
+.future-card > div{
+    font-family:'Anton',sans-serif;
+    color:#F97316;
+    font-size:24px;
+}
+
+.future-card h3{
+    font-size:16px;
+    margin:25px 0 10px;
+}
+
+.future-card p{
+    color:#777;
+    font-size:11px;
+    line-height:1.8;
+}
+
+.future-card:hover p{
+    color:#ddd;
+}
+
+
+/* =========================
+   SUPPORT
+========================= */
+
+.support-section{
+    width:92%;
+    max-width:1100px;
+
+    margin:0 auto 130px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    padding:70px 0;
+
+    border-top:2px solid #111;
+    border-bottom:2px solid #111;
+}
+
+.support-left h2{
+    font-family:'Anton',sans-serif;
+    color:#4C1D95;
+    font-size:55px;
+    line-height:.95;
+    margin:18px 0 25px;
+}
+
+.support-left > p:last-child{
+    color:#666;
+    font-size:13px;
+    line-height:1.9;
+    max-width:480px;
+}
+
+.support-list{
+    display:flex;
+    flex-direction:column;
+}
+
+.support-list div{
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+    padding:17px 0;
+
+    border-bottom:1px solid #ddd;
+}
+
+.support-list span{
+    color:#F97316;
+    font-family:'Anton',sans-serif;
+}
+
+.support-list strong{
+    font-size:12px;
+    color:#333;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.academic-cta{
+    background:#4C1D95;
+    color:#fff;
+
+    text-align:center;
+
+    padding:100px 25px;
+}
+
+.academic-cta > p{
+    color:#F97316;
+    font-size:11px;
+    letter-spacing:4px;
+    font-weight:700;
+}
+
+.academic-cta h2{
+    font-family:'Anton',sans-serif;
+    font-size:75px;
+    line-height:.9;
+    margin:20px 0 35px;
+}
+
+.academic-cta h2 span{
+    color:#F97316;
+}
+
+.cta-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.primary-btn,
+.secondary-btn{
+    padding:15px 25px;
+
+    text-decoration:none;
+
+    font-size:12px;
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.primary-btn{
+    background:#F97316;
+    color:#fff;
+}
+
+.primary-btn span{
+    margin-left:8px;
+}
+
+.primary-btn:hover{
+    background:#fff;
+    color:#4C1D95;
+}
+
+.secondary-btn{
+    border:2px solid #fff;
+    color:#fff;
+}
+
+.secondary-btn:hover{
+    background:#fff;
+    color:#4C1D95;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    padding:30px 20px;
+
+    text-align:center;
+
+    background:#FAF8F5;
+
+    border-top:1px solid #ddd;
+
+    color:#999;
+
+    font-size:10px;
+}
+
+.developer-credit{
+    margin-top:7px;
+    color:#777;
+    font-size:9px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:800px){
+
+    .academic-header{
+        padding:18px;
+    }
+
+    .brand-best{
+        font-size:42px;
+    }
+
+    .brand-line{
+        height:42px;
+    }
+
+    .brand-text strong{
+        font-size:10px;
+    }
+
+    .brand-text span{
+        font-size:8px;
+    }
+
+
+    .academic-hero{
+        margin-top:65px;
+        margin-bottom:80px;
+    }
+
+    .academic-hero h1{
+        font-size:52px;
+    }
+
+
+    .philosophy-section{
+        grid-template-columns:1fr;
+        gap:25px;
+        padding:45px 0;
+    }
+
+    .section-number{
+        font-size:28px;
+    }
+
+    .philosophy-content h2{
+        font-size:45px;
+    }
+
+
+    .school-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .section-heading h2{
+        font-size:45px;
+    }
+
+
+    .pu-heading h2{
+        font-size:50px;
+    }
+
+    .pu-years{
+        grid-template-columns:1fr;
+    }
+
+    .stream-grid{
+        grid-template-columns:1fr;
+    }
+
+
+    .future-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .future-heading h2{
+        font-size:45px;
+    }
+
+
+    .support-section{
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+
+    .support-left h2{
+        font-size:45px;
+    }
+
+
+    .academic-cta h2{
+        font-size:55px;
+    }
+
+}
+
+
+@media(max-width:480px){
+
+    .academic-hero h1{
+        font-size:43px;
+    }
+
+    .school-grid{
+        grid-template-columns:1fr;
+    }
+
+    .future-grid{
+        grid-template-columns:1fr;
+    }
+
+    .section-heading h2,
+    .future-heading h2{
+        font-size:40px;
+    }
+
+    .philosophy-content h2,
+    .support-left h2{
+        font-size:40px;
+    }
+
+    .academic-cta h2{
+        font-size:48px;
+    }
+
+      }
