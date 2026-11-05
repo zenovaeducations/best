@@ -1279,7 +1279,12 @@ async function verifyAdmin(user) {
     }
 
     const profile = profileSnap.data();
-
+console.log("FIREBASE PROJECT:", auth.app.options.projectId);
+console.log("SIGNED IN UID:", user.uid);
+console.log("DOCUMENT EXISTS:", profileSnap.exists());
+console.log("PROFILE:", profile);
+console.log("IS ACTIVE:", profile?.isActive);
+console.log("IS ACTIVE TYPE:", typeof profile?.isActive);
     if (
         profile.email &&
         profile.email.toLowerCase() !== ADMIN_EMAIL
@@ -1292,8 +1297,12 @@ async function verifyAdmin(user) {
     }
 
     if (profile.isActive !== true) {
-        throw new Error("This administrator account is inactive.");
-    }
+    throw new Error(
+        "Admin inactive. Received value: " +
+        JSON.stringify(profile.isActive) +
+        " | Type: " + typeof profile.isActive
+    );
+        }
 
     return profile;
 }
