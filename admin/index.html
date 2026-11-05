@@ -1285,6 +1285,14 @@ console.log("DOCUMENT EXISTS:", profileSnap.exists());
 console.log("PROFILE:", profile);
 console.log("IS ACTIVE:", profile?.isActive);
 console.log("IS ACTIVE TYPE:", typeof profile?.isActive);
+
+    console.log("PROJECT:", auth.app.options.projectId);
+console.log("COLLECTION:", profileSnap.ref.parent.id);
+console.log("DOCUMENT ID:", profileSnap.id);
+console.log("DOCUMENT PATH:", profileSnap.ref.path);
+console.log("ALL PROFILE DATA:", JSON.stringify(profile, null, 2));
+console.log("AVAILABLE FIELDS:", Object.keys(profile));
+console.log("ACTIVE FIELD:", profile["isActive"]);
     if (
         profile.email &&
         profile.email.toLowerCase() !== ADMIN_EMAIL
