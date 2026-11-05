@@ -459,6 +459,15 @@ async function verifyAdmin(user) {
 
   console.log("Complete Firestore profile:", profile);
   console.log("Profile fields:", Object.keys(profile));
+  console.log("RAW PROFILE:", JSON.stringify(profile));
+console.log("PROFILE ENTRIES:", Object.entries(profile));
+console.log(
+  "FIELD NAME CHARACTERS:",
+  Object.keys(profile).map(key => ({
+    name: key,
+    characters: [...key].map(c => c.charCodeAt(0))
+  }))
+);
   console.log("isActive value:", profile.isActive);
   console.log("isActive type:", typeof profile.isActive);
   console.log("Role:", profile.role);
