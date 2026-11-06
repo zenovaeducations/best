@@ -1390,6 +1390,238 @@ button {
   }
   .reveal { opacity: 1; transform: none; }
 }
+  /* ===== BEST CINEMATIC HERO ===== */
+
+.best-hero {
+  position: relative;
+  min-height: 88vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: #54101f;
+  color: #fff;
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  animation: heroZoom 18s ease-in-out infinite alternate;
+}
+
+@keyframes heroZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.09); }
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(38, 5, 15, .94) 0%,
+      rgba(64, 8, 24, .78) 45%,
+      rgba(64, 8, 24, .25) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(30, 5, 12, .55),
+      transparent 45%
+    );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: min(1200px, 90%);
+  margin: auto;
+  padding: 110px 0 120px;
+  animation: heroReveal 1.2s ease both;
+}
+
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: #e4c38e;
+  margin-bottom: 28px;
+  font-weight: 700;
+}
+
+.hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(42px, 6.2vw, 82px);
+  line-height: 1.12;
+  font-weight: 600;
+  letter-spacing: -2px;
+  margin: 0;
+  max-width: 850px;
+}
+
+.hero-content h1 span {
+  color: #dfb879;
+  font-style: italic;
+}
+
+.hero-content p {
+  max-width: 550px;
+  margin: 28px 0 35px;
+  font-size: 16px;
+  line-height: 1.9;
+  color: rgba(255,255,255,.82);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  padding: 17px 25px;
+  min-width: 190px;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .3px;
+  transition: .35s ease;
+}
+
+.hero-btn.primary {
+  background: #d2ad70;
+  color: #34101b;
+}
+
+.hero-btn.primary:hover {
+  background: white;
+  transform: translateY(-4px);
+}
+
+.hero-btn.secondary {
+  border: 1px solid rgba(255,255,255,.6);
+  color: white;
+}
+
+.hero-btn.secondary:hover {
+  background: white;
+  color: #54101f;
+  transform: translateY(-4px);
+}
+
+.hero-bottom {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 75px;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,.75);
+}
+
+.hero-line {
+  width: 65px;
+  height: 1px;
+  background: #d2ad70;
+}
+
+.hero-scroll {
+  position: absolute;
+  z-index: 3;
+  right: 5%;
+  bottom: 42px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: white;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.hero-scroll div {
+  width: 45px;
+  height: 1px;
+  background: #d2ad70;
+}
+
+@media(max-width: 700px) {
+  .best-hero {
+    min-height: 82vh;
+  }
+
+  .hero-content {
+    padding: 90px 0 100px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(40px, 11vw, 60px);
+    letter-spacing: -1px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-btn {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .hero-bottom {
+    margin-top: 50px;
+    gap: 9px;
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .hero-line {
+    width: 25px;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  .hero-background img,
+  .hero-content {
+    animation: none;
+  }
+
+  .hero-btn {
+    transition: none;
+  }
+}
 </style>
 </head>
 
@@ -1471,52 +1703,58 @@ button {
     <a href="login/">Student Login</a>
   </nav>
 </div>
+  
+<!-- BEST CINEMATIC HERO -->
+<section class="best-hero" id="home">
 
-<!-- HERO VIDEO -->
-<section class="hero" id="home">
-
-  <div class="hero-media">
-    <video id="heroVideo" autoplay muted loop playsinline poster="2.png">
-      <!--
-        ADD YOUR CAMPUS VIDEO HERE:
-        Create an assets folder in the project root.
-        Upload your video as best-campus-hero.mp4.
-        Then uncomment this source:
-      -->
-      <!-- <source src="assets/best-campus-hero.mp4" type="video/mp4"> -->
-    </video>
-    <img src="2.png" alt="BEST students learning together">
+  <div class="hero-background">
+    <img src="2.png" alt="BEST Campus">
   </div>
 
   <div class="hero-overlay"></div>
 
-  <div class="hero-inner">
-    <div class="hero-kicker">BEST · English Medium School & International PU College</div>
+  <div class="hero-content">
 
-    <h1 class="hero-title">
-      <span class="line"><span>Where Excellence</span></span>
-      <span class="line"><span>Begins. Where <em>Futures</em></span></span>
-      <span class="line"><span>Take Shape.</span></span>
+    <span class="hero-eyebrow">
+      EXCELLENCE • EDUCATION • FUTURE
+    </span>
+
+    <h1>
+      Where Excellence<br>
+      <span>Begins.</span>
+      Where Futures<br>
+      Take Shape.
     </h1>
 
-    <p class="hero-description">
-      Inspiring young minds through knowledge, values, discipline
-      and a commitment to excellence. Discover an educational
-      journey that prepares students for a brighter tomorrow.
+    <p>
+      Empowering young minds through quality education,
+      strong values and a vision for a brighter tomorrow.
     </p>
 
-    <div class="hero-actions">
-      <a href="#about" class="btn btn-light">DISCOVER BEST <span>→</span></a>
-      <a href="admissions/" class="btn btn-outline">ADMISSIONS <span>↗</span></a>
+    <div class="hero-buttons">
+      <a href="academics/school.html" class="hero-btn primary">
+        Explore School <span>↗</span>
+      </a>
+
+      <a href="academics/pu.html" class="hero-btn secondary">
+        Explore PU College <span>↗</span>
+      </a>
     </div>
+
+    <div class="hero-bottom">
+      <span>BEST ENGLISH MEDIUM SCHOOL</span>
+      <span class="hero-line"></span>
+      <span>INTERNATIONAL PU COLLEGE</span>
+    </div>
+
   </div>
 
-  <div class="hero-bottom">
-    <span>Learning · Values · Excellence</span>
-    <div class="scroll-cue"><span></span> SCROLL TO EXPLORE</div>
+  <div class="hero-scroll">
+    <span>SCROLL TO EXPLORE</span>
+    <div></div>
   </div>
+
 </section>
-
 <!-- BRAND MARQUEE -->
 <div class="marquee" aria-label="BEST values">
   <div class="marquee-track">
