@@ -1622,6 +1622,81 @@ button {
     transition: none;
   }
 }
+  /* ===== SECTION 03: BRAND MARQUEE ===== */
+
+.best-marquee {
+  width: 100%;
+  overflow: hidden;
+  background: #54101F;
+  border-top: 1px solid rgba(210,173,112,.3);
+  border-bottom: 1px solid rgba(210,173,112,.3);
+  padding: 21px 0;
+  position: relative;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: bestMarqueeScroll 35s linear infinite;
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 45px;
+  padding-right: 45px;
+}
+
+.marquee-content span {
+  color: #F8F5F0;
+  font-family: 'Manrope', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.8px;
+  white-space: nowrap;
+}
+
+.marquee-content i {
+  color: #D2AD70;
+  font-style: normal;
+  font-size: 16px;
+}
+
+@keyframes bestMarqueeScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.best-marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@media(max-width: 700px) {
+  .best-marquee {
+    padding: 17px 0;
+  }
+
+  .marquee-content {
+    gap: 25px;
+    padding-right: 25px;
+  }
+
+  .marquee-content span {
+    font-size: 9px;
+    letter-spacing: 1.8px;
+  }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
 </style>
 </head>
 
@@ -1753,21 +1828,42 @@ button {
     <span>SCROLL TO EXPLORE</span>
     <div></div>
   </div>
-
 </section>
-<!-- BRAND MARQUEE -->
-<div class="marquee" aria-label="BEST values">
+
+  <!-- SECTION 03: BEST BRAND MARQUEE -->
+<section class="best-marquee" aria-label="Our educational values">
   <div class="marquee-track">
-    <div class="marquee-item">
-      <span>LEARN</span><i>✦</i><span>LEAD</span><i>✦</i>
-      <span>ACHIEVE</span><i>✦</i><span>INSPIRE</span><i>✦</i><span>EXCEL</span><i>✦</i>
+
+    <div class="marquee-content">
+      <span>QUALITY EDUCATION</span>
+      <i>✦</i>
+      <span>STRONG VALUES</span>
+      <i>✦</i>
+      <span>ACADEMIC EXCELLENCE</span>
+      <i>✦</i>
+      <span>SCHOOL & PU EDUCATION</span>
+      <i>✦</i>
+      <span>BUILDING FUTURES</span>
+      <i>✦</i>
     </div>
-    <div class="marquee-item" aria-hidden="true">
-      <span>LEARN</span><i>✦</i><span>LEAD</span><i>✦</i>
-      <span>ACHIEVE</span><i>✦</i><span>INSPIRE</span><i>✦</i><span>EXCEL</span><i>✦</i>
+
+    <!-- Duplicate for seamless scrolling -->
+    <div class="marquee-content" aria-hidden="true">
+      <span>QUALITY EDUCATION</span>
+      <i>✦</i>
+      <span>STRONG VALUES</span>
+      <i>✦</i>
+      <span>ACADEMIC EXCELLENCE</span>
+      <i>✦</i>
+      <span>SCHOOL & PU EDUCATION</span>
+      <i>✦</i>
+      <span>BUILDING FUTURES</span>
+      <i>✦</i>
     </div>
+
   </div>
-</div>
+</section>
+  
 
 <!-- STATISTICS -->
 <section class="stats">
