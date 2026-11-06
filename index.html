@@ -2598,6 +2598,223 @@ button {
   }
 }
 
+/* ===== SECTION 09: CAMPUS & INFRASTRUCTURE ===== */
+
+.best-campus {
+  background: #fff;
+  padding: 110px 6%;
+}
+
+.campus-container {
+  max-width: 1250px;
+  margin: auto;
+}
+
+.campus-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 40px;
+  margin-bottom: 45px;
+}
+
+.campus-eyebrow {
+  color: #9B7042;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.campus-heading h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(34px, 4vw, 49px);
+  font-weight: 500;
+  line-height: 1.2;
+  color: #262124;
+  margin: 18px 0 0;
+}
+
+.campus-heading h2 em {
+  color: #8E142B;
+}
+
+.campus-heading > p {
+  max-width: 370px;
+  color: #777078;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.campus-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-rows: 260px 260px;
+  gap: 16px;
+}
+
+.campus-item {
+  position: relative;
+  overflow: hidden;
+  background: #54101F;
+  min-width: 0;
+}
+
+.campus-main {
+  grid-row: span 2;
+}
+
+.campus-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .8s ease;
+}
+
+.campus-item:hover img {
+  transform: scale(1.07);
+}
+
+.campus-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(36, 5, 15, .88),
+    rgba(36, 5, 15, 0) 75%
+  );
+}
+
+.campus-image-content {
+  position: absolute;
+  left: 24px;
+  right: 20px;
+  bottom: 24px;
+  color: white;
+}
+
+.campus-image-content > span {
+  color: #D2AD70;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.campus-image-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 10px 0 0;
+}
+
+.campus-main .campus-image-content {
+  left: 35px;
+  bottom: 38px;
+}
+
+.campus-main .campus-image-content h3 {
+  font-size: 39px;
+}
+
+.campus-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #E9E1DC;
+  margin-top: 30px;
+  padding-top: 25px;
+  gap: 20px;
+}
+
+.campus-bottom > span {
+  color: #9B7042;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.campus-bottom a {
+  color: #8E142B;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  gap: 25px;
+  transition: .3s;
+}
+
+.campus-bottom a:hover {
+  color: #54101F;
+  gap: 35px;
+}
+
+@media(max-width: 850px) {
+  .campus-heading {
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+  }
+
+  .campus-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 350px 230px 230px;
+  }
+
+  .campus-main {
+    grid-column: span 2;
+    grid-row: auto;
+  }
+}
+
+@media(max-width: 550px) {
+  .best-campus {
+    padding: 75px 6%;
+  }
+
+  .campus-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 270px 190px 190px;
+    gap: 10px;
+  }
+
+  .campus-main {
+    grid-column: span 2;
+  }
+
+  .campus-image-content {
+    left: 12px;
+    bottom: 14px;
+  }
+
+  .campus-image-content h3 {
+    font-size: 17px;
+  }
+
+  .campus-main .campus-image-content {
+    left: 20px;
+    bottom: 22px;
+  }
+
+  .campus-main .campus-image-content h3 {
+    font-size: 29px;
+  }
+
+  .campus-image-content > span {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .campus-bottom {
+    align-items: start;
+    flex-direction: column;
+  }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  .campus-item img {
+    transition: none;
+  }
+}
+
 </style>
 </head>
 
@@ -3207,6 +3424,78 @@ button {
   </div>
 </section>
 
+<!-- SECTION 09: CAMPUS & INFRASTRUCTURE -->
+
+<section class="best-campus" id="campus">
+
+  <div class="campus-container">
+
+    <div class="campus-heading">
+      <div>
+        <span class="campus-eyebrow">OUR LEARNING ENVIRONMENT</span>
+        <h2>A Campus Designed for <em>Possibilities.</em></h2>
+      </div>
+
+      <p>
+        Explore the spaces and facilities that support
+        learning, discovery and student development.
+      </p>
+    </div>
+
+    <div class="campus-grid">
+
+      <!-- MAIN IMAGE -->
+      <article class="campus-item campus-main">
+        <img src="1.png" alt="BEST campus building">
+        <div class="campus-image-overlay"></div>
+        <div class="campus-image-content">
+          <span>01 / OUR CAMPUS</span>
+          <h3>A Place to Learn<br>and Grow.</h3>
+        </div>
+      </article>
+
+      <!-- CLASSROOM -->
+      <article class="campus-item">
+        <img src="2.png" alt="BEST learning environment">
+        <div class="campus-image-overlay"></div>
+        <div class="campus-image-content">
+          <span>02 / LEARNING</span>
+          <h3>Classrooms</h3>
+        </div>
+      </article>
+
+      <!-- LABORATORY -->
+      <article class="campus-item">
+        <img src="1.png" alt="BEST campus facilities">
+        <div class="campus-image-overlay"></div>
+        <div class="campus-image-content">
+          <span>03 / DISCOVERY</span>
+          <h3>Learning Facilities</h3>
+        </div>
+      </article>
+
+      <!-- LIBRARY -->
+      <article class="campus-item">
+        <img src="2.png" alt="BEST educational spaces">
+        <div class="campus-image-overlay"></div>
+        <div class="campus-image-content">
+          <span>04 / KNOWLEDGE</span>
+          <h3>Learning Spaces</h3>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="campus-bottom">
+      <span>DISCOVER THE BEST ENVIRONMENT</span>
+      <a href="campus/">Explore Our Campus <span>↗</span></a>
+    </div>
+
+  </div>
+
+</section>
+
+  
 <!-- FACILITIES -->
 <section class="section facilities" id="facilities">
   <div class="container">
