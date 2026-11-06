@@ -1850,6 +1850,174 @@ button {
     font-size: 7px;
   }
 }
+  /* ===== SECTION 05: ABOUT BEST ===== */
+
+.best-about {
+  background: #fff;
+  padding: 110px 6%;
+  overflow: hidden;
+}
+
+.about-container {
+  max-width: 1250px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 85px;
+}
+
+.about-image {
+  position: relative;
+  min-height: 570px;
+  overflow: hidden;
+}
+
+.about-image img {
+  width: 100%;
+  height: 570px;
+  object-fit: cover;
+  transition: transform 1s ease;
+}
+
+.about-image:hover img {
+  transform: scale(1.04);
+}
+
+.about-image-label {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  background: #54101F;
+  color: white;
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.about-image-label span {
+  font-family: 'Playfair Display', serif;
+  font-size: 27px;
+}
+
+.about-image-label small {
+  color: #D2AD70;
+  font-size: 8px;
+  letter-spacing: 1.5px;
+}
+
+.about-eyebrow {
+  color: #9B7042;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.about-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(34px, 4vw, 51px);
+  font-weight: 500;
+  line-height: 1.2;
+  color: #262124;
+  margin: 20px 0;
+}
+
+.about-content h2 em {
+  display: block;
+  color: #8E142B;
+}
+
+.about-intro {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #494047;
+  font-weight: 600;
+}
+
+.about-description {
+  font-size: 13px;
+  line-height: 1.9;
+  color: #777078;
+  margin: 18px 0 30px;
+}
+
+.about-highlights {
+  border-top: 1px solid #E9E1DC;
+}
+
+.about-highlight {
+  display: flex;
+  gap: 22px;
+  padding: 18px 0;
+  border-bottom: 1px solid #E9E1DC;
+}
+
+.about-highlight > span {
+  color: #C29B64;
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+}
+
+.about-highlight h3 {
+  font-size: 13px;
+  color: #54101F;
+  margin: 0 0 6px;
+}
+
+.about-highlight p {
+  font-size: 11px;
+  color: #777078;
+  margin: 0;
+}
+
+.about-btn {
+  display: inline-flex;
+  gap: 30px;
+  align-items: center;
+  background: #8E142B;
+  color: white;
+  padding: 17px 23px;
+  margin-top: 30px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  transition: .3s ease;
+}
+
+.about-btn:hover {
+  background: #54101F;
+  transform: translateY(-3px);
+}
+
+@media(max-width: 850px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .about-image,
+  .about-image img {
+    min-height: 400px;
+    height: 400px;
+  }
+}
+
+@media(max-width: 500px) {
+  .best-about {
+    padding: 75px 6%;
+  }
+
+  .about-image,
+  .about-image img {
+    min-height: 330px;
+    height: 330px;
+  }
+
+  .about-content h2 {
+    font-size: 36px;
+  }
+}
 </style>
 </head>
 
@@ -2086,51 +2254,79 @@ button {
 
 </section>
 
-<!-- ABOUT BEST -->
-<section class="section about" id="about">
-  <div class="container about-grid">
+<!-- SECTION 05: ABOUT BEST -->
 
-    <div class="about-copy reveal">
-      <div class="eyebrow">DISCOVER BEST</div>
-      <h2 class="section-heading">A Journey of Learning. A Future of <span class="gold-text">Possibilities.</span></h2>
-      <p class="section-description">
-        BEST English Medium School and International PU College
-        brings school education and pre-university learning together
-        under one educational identity.
-      </p>
-      <p class="section-description">
-        Our aim is to create an environment where students can
-        develop knowledge, confidence, discipline and the skills
-        needed for the opportunities ahead.
-      </p>
-      <a href="campus/" class="btn btn-primary" style="margin-top:25px">DISCOVER OUR CAMPUS →</a>
+<section class="best-about" id="about">
+
+  <div class="about-container">
+
+    <div class="about-image">
+      <img src="1.png" alt="BEST Educational Campus">
+
+      <div class="about-image-label">
+        <span>BEST</span>
+        <small>LEARNING • GROWTH • EXCELLENCE</small>
+      </div>
     </div>
 
-    <div class="about-image reveal">
-      <img src="1.png" alt="BEST students participating in science learning" loading="lazy">
-    </div>
+    <div class="about-content">
 
-    <div class="about-values reveal">
-      <div class="value">
-        <div class="value-mark">01</div>
-        <h3>Academic Excellence</h3>
-        <p>Encouraging curiosity, understanding and a commitment to learning.</p>
+      <span class="about-eyebrow">GET TO KNOW US</span>
+
+      <h2>
+        More Than Education.
+        <em>A Foundation for Life.</em>
+      </h2>
+
+      <p class="about-intro">
+        At BEST English Medium School and International PU College,
+        we believe education is about discovering potential,
+        developing character and preparing students for life.
+      </p>
+
+      <p class="about-description">
+        Our institution brings together school education and
+        pre-university learning in an environment designed to
+        encourage curiosity, confidence, discipline and academic growth.
+      </p>
+
+      <div class="about-highlights">
+
+        <div class="about-highlight">
+          <span>01</span>
+          <div>
+            <h3>Quality Education</h3>
+            <p>Building strong academic foundations.</p>
+          </div>
+        </div>
+
+        <div class="about-highlight">
+          <span>02</span>
+          <div>
+            <h3>Holistic Development</h3>
+            <p>Encouraging growth beyond the classroom.</p>
+          </div>
+        </div>
+
+        <div class="about-highlight">
+          <span>03</span>
+          <div>
+            <h3>Future Readiness</h3>
+            <p>Preparing students for tomorrow's opportunities.</p>
+          </div>
+        </div>
+
       </div>
-      <div class="value">
-        <div class="value-mark">02</div>
-        <h3>Values & Discipline</h3>
-        <p>Supporting responsibility, integrity, respect and positive character.</p>
-      </div>
-      <div class="value">
-        <div class="value-mark">03</div>
-        <h3>Holistic Development</h3>
-        <p>Creating opportunities to grow through academics and activities.</p>
-      </div>
+
+      <a href="about.html" class="about-btn">
+        Discover Our Institution <span>↗</span>
+      </a>
+
     </div>
 
   </div>
-</section>
 
+</section>
 <!-- TWO DIVISIONS -->
 <section class="section divisions" id="divisions">
   <div class="container">
