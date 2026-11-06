@@ -2018,6 +2018,586 @@ button {
     font-size: 36px;
   }
 }
+  /* ===== SECTION 06: OUR DIVISIONS ===== */
+
+.best-divisions {
+  background: #F8F5F0;
+  padding: 105px 6%;
+}
+
+.divisions-container {
+  max-width: 1250px;
+  margin: auto;
+}
+
+.divisions-heading {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 55px;
+}
+
+.divisions-heading > span {
+  color: #9B7042;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.divisions-heading h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(35px, 4vw, 50px);
+  font-weight: 500;
+  color: #262124;
+  margin: 18px 0;
+}
+
+.divisions-heading h2 em {
+  color: #8E142B;
+}
+
+.divisions-heading p {
+  color: #777078;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.divisions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.division-card {
+  position: relative;
+  height: 570px;
+  overflow: hidden;
+  background: #54101F;
+  color: white;
+}
+
+.division-card > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s ease;
+}
+
+.division-card:hover > img {
+  transform: scale(1.07);
+}
+
+.division-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(25, 5, 12, .12) 0%,
+    rgba(40, 5, 15, .25) 35%,
+    rgba(40, 5, 15, .93) 100%
+  );
+}
+
+.division-number {
+  position: absolute;
+  top: 28px;
+  left: 30px;
+  color: white;
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.division-content {
+  position: absolute;
+  bottom: 38px;
+  left: 35px;
+  right: 35px;
+}
+
+.division-label {
+  color: #D2AD70;
+  font-size: 9px;
+  letter-spacing: 2.5px;
+  font-weight: 800;
+}
+
+.division-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 3.5vw, 45px);
+  line-height: 1.15;
+  font-weight: 500;
+  margin: 16px 0;
+}
+
+.division-content p {
+  max-width: 390px;
+  color: rgba(255,255,255,.8);
+  font-size: 12px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.division-content a {
+  display: inline-flex;
+  gap: 35px;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid #D2AD70;
+  padding-bottom: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  transition: .3s;
+}
+
+.division-content a:hover {
+  color: #D2AD70;
+  gap: 45px;
+}
+
+@media(max-width: 800px) {
+  .divisions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .division-card {
+    height: 500px;
+  }
+}
+
+@media(max-width: 500px) {
+  .best-divisions {
+    padding: 75px 6%;
+  }
+
+  .division-card {
+    height: 450px;
+  }
+
+  .division-content {
+    left: 23px;
+    right: 23px;
+    bottom: 27px;
+  }
+
+  .division-content h3 {
+    font-size: 34px;
+  }
+}
+  /* ===== SECTION 07: ACADEMIC EXCELLENCE ===== */
+
+.best-excellence {
+  background: #fff;
+  padding: 110px 6%;
+}
+
+.excellence-container {
+  max-width: 1250px;
+  margin: auto;
+}
+
+.excellence-heading {
+  max-width: 720px;
+  text-align: center;
+  margin: 0 auto 65px;
+}
+
+.excellence-heading > span {
+  color: #9B7042;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.excellence-heading h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(34px, 4vw, 49px);
+  font-weight: 500;
+  line-height: 1.2;
+  color: #262124;
+  margin: 18px 0;
+}
+
+.excellence-heading h2 em {
+  color: #8E142B;
+}
+
+.excellence-heading p {
+  color: #777078;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.excellence-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #E9E1DC;
+  border-left: 1px solid #E9E1DC;
+}
+
+.excellence-card {
+  position: relative;
+  padding: 38px 32px;
+  min-height: 225px;
+  border-right: 1px solid #E9E1DC;
+  border-bottom: 1px solid #E9E1DC;
+  transition: background .35s, transform .35s;
+}
+
+.excellence-card:hover {
+  background: #F8F5F0;
+  transform: translateY(-4px);
+}
+
+.excellence-icon {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  color: #B8A18A;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.excellence-symbol {
+  color: #A77C4B;
+  font-size: 31px;
+  margin-bottom: 24px;
+}
+
+.excellence-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 21px;
+  font-weight: 600;
+  color: #54101F;
+  margin: 0 0 12px;
+}
+
+.excellence-card p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #777078;
+  max-width: 290px;
+}
+
+@media(max-width: 850px) {
+  .excellence-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 550px) {
+  .best-excellence {
+    padding: 75px 6%;
+  }
+
+  .excellence-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .excellence-card {
+    min-height: 185px;
+    padding: 30px 25px;
+  }
+}
+  
+/* ===== SECTION 08: ACADEMIC PROGRAMMES ===== */
+
+.best-programmes {
+  background: #F8F5F0;
+  padding: 110px 6%;
+  color: #262124;
+}
+
+.programmes-container {
+  max-width: 1250px;
+  margin: auto;
+}
+
+.programmes-heading {
+  max-width: 720px;
+  text-align: center;
+  margin: 0 auto 55px;
+}
+
+.programmes-eyebrow {
+  color: #9B7042;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.programmes-heading h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(35px, 4vw, 50px);
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 18px 0;
+}
+
+.programmes-heading h2 em {
+  color: #8E142B;
+}
+
+.programmes-heading p {
+  color: #777078;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* TABS */
+
+.programmes-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 45px;
+}
+
+.programme-tab {
+  border: 1px solid #E9E1DC;
+  background: white;
+  color: #54101F;
+  padding: 18px 30px;
+  min-width: 220px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.programme-tab span {
+  color: #C29B64;
+  margin-right: 12px;
+  font-size: 10px;
+}
+
+.programme-tab.active,
+.programme-tab:hover {
+  background: #54101F;
+  color: white;
+  border-color: #54101F;
+}
+
+.programme-tab:focus-visible {
+  outline: 3px solid #D2AD70;
+  outline-offset: 3px;
+}
+
+/* PANELS */
+
+.programme-panel {
+  animation: programmeFade .4s ease;
+}
+
+.programme-panel[hidden] {
+  display: none;
+}
+
+@keyframes programmeFade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.programme-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.programme-intro > div > span {
+  color: #9B7042;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.programme-intro h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 500;
+  color: #54101F;
+  margin: 12px 0 0;
+}
+
+.programme-intro > p {
+  max-width: 380px;
+  color: #777078;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* CARDS */
+
+.programme-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.programme-card {
+  position: relative;
+  background: white;
+  border: 1px solid #E9E1DC;
+  padding: 38px 30px 28px;
+  min-height: 295px;
+  display: flex;
+  flex-direction: column;
+  transition: .35s ease;
+}
+
+.programme-card:hover {
+  border-color: #D2AD70;
+  box-shadow: 0 18px 45px rgba(84,16,31,.07);
+  transform: translateY(-5px);
+}
+
+.programme-card-number {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  color: #B8A18A;
+  font-size: 10px;
+}
+
+.programme-card-icon {
+  font-size: 34px;
+  color: #B58D57;
+  margin-bottom: 30px;
+}
+
+.programme-card h4 {
+  font-family: 'Playfair Display', serif;
+  color: #54101F;
+  font-size: 23px;
+  font-weight: 600;
+  margin: 0 0 15px;
+}
+
+.programme-card p {
+  color: #777078;
+  font-size: 12px;
+  line-height: 1.9;
+  margin: 0 0 35px;
+}
+
+.programme-card-bottom {
+  display: block;
+  border-top: 1px solid #E9E1DC;
+  padding-top: 18px;
+  margin-top: auto;
+  color: #9B7042;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+/* FOOTER */
+
+.programmes-footer {
+  margin-top: 45px;
+  padding-top: 30px;
+  border-top: 1px solid #E9E1DC;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.programmes-footer p {
+  font-size: 13px;
+  color: #777078;
+}
+
+.programmes-footer a {
+  display: inline-flex;
+  gap: 30px;
+  align-items: center;
+  background: #8E142B;
+  color: white;
+  text-decoration: none;
+  padding: 17px 24px;
+  font-size: 12px;
+  font-weight: 700;
+  transition: .3s;
+}
+
+.programmes-footer a:hover {
+  background: #54101F;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 850px) {
+  .programme-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .programme-intro {
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+  }
+}
+
+@media(max-width: 600px) {
+  .best-programmes {
+    padding: 75px 6%;
+  }
+
+  .programmes-tabs {
+    gap: 8px;
+  }
+
+  .programme-tab {
+    min-width: 0;
+    flex: 1;
+    padding: 16px 8px;
+    font-size: 11px;
+  }
+
+  .programme-tab span {
+    margin-right: 5px;
+  }
+
+  .programme-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .programme-card {
+    min-height: 250px;
+  }
+
+  .programmes-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .programmes-footer a {
+    justify-content: space-between;
+  }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  .programme-panel {
+    animation: none;
+  }
+
+  .programme-card,
+  .programme-tab,
+  .programmes-footer a {
+    transition: none;
+  }
+}
+
 </style>
 </head>
 
@@ -2326,100 +2906,304 @@ button {
 
   </div>
 
-</section>
-<!-- TWO DIVISIONS -->
-<section class="section divisions" id="divisions">
-  <div class="container">
+</section><!-- SECTION 06: OUR TWO DIVISIONS -->
 
-    <div class="center-heading reveal">
-      <div class="eyebrow">ONE INSTITUTION · TWO DIVISIONS</div>
-      <h2 class="section-heading">One BEST. <span class="gold-text">Two Academic Journeys.</span></h2>
-      <p class="section-description">
-        Discover the educational opportunities offered through
-        BEST English Medium School and BEST International PU College.
+<section class="best-divisions" id="divisions">
+
+  <div class="divisions-container">
+
+    <div class="divisions-heading">
+      <span>ONE INSTITUTION. TWO PATHWAYS.</span>
+      <h2>Two Divisions. <em>One Vision.</em></h2>
+      <p>
+        Learning opportunities designed for every important
+        stage of a student's educational journey.
       </p>
     </div>
 
-    <div class="division-grid">
+    <div class="divisions-grid">
 
-      <article class="division-card reveal" id="school">
-        <img src="2.png" alt="Students learning at BEST English Medium School" loading="lazy">
+      <!-- SCHOOL DIVISION -->
+      <article class="division-card">
+
+        <img src="1.png" alt="BEST English Medium School">
+
+        <div class="division-overlay"></div>
+
+        <div class="division-number">01 / SCHOOL</div>
+
         <div class="division-content">
-          <div class="division-number">DIVISION 01 · SCHOOL EDUCATION</div>
-          <h3>BEST English Medium School</h3>
+          <span class="division-label">SCHOOL EDUCATION</span>
+
+          <h3>BEST English<br>Medium School</h3>
+
           <p>
-            A learning journey focused on academic foundations,
-            confidence, values and all-round student development.
+            Building strong foundations through learning,
+            discipline, creativity and confidence.
           </p>
-          <a href="academics/" class="text-link">EXPLORE SCHOOL <span>→</span></a>
+
+          <a href="academics/school.html">
+            Explore School <span>↗</span>
+          </a>
         </div>
+
       </article>
 
-      <article class="division-card reveal" id="college">
-        <img src="1.png" alt="Students participating in science learning at BEST PU College" loading="lazy">
+      <!-- PU COLLEGE DIVISION -->
+      <article class="division-card">
+
+        <img src="2.png" alt="BEST International PU College">
+
+        <div class="division-overlay"></div>
+
+        <div class="division-number">02 / PU COLLEGE</div>
+
         <div class="division-content">
-          <div class="division-number">DIVISION 02 · PRE-UNIVERSITY EDUCATION</div>
-          <h3>BEST International PU College</h3>
+          <span class="division-label">PRE-UNIVERSITY EDUCATION</span>
+
+          <h3>BEST International<br>PU College</h3>
+
           <p>
-            A focused academic environment supporting pre-university
-            learning and preparation for higher education.
+            Preparing students for higher education,
+            academic achievement and future aspirations.
           </p>
-          <a href="academics/" class="text-link">EXPLORE PU COLLEGE <span>→</span></a>
+
+          <a href="academics/pu.html">
+            Explore PU College <span>↗</span>
+          </a>
         </div>
+
       </article>
 
     </div>
+
   </div>
+
 </section>
 
-<!-- ACADEMIC EXCELLENCE -->
-<section class="section academics" id="academics">
-  <div class="container">
+<!-- SECTION 07: ACADEMIC EXCELLENCE -->
 
-    <div class="eyebrow">OUR ACADEMIC APPROACH</div>
-    <h2 class="section-heading">Education That Builds More Than Knowledge.</h2>
-    <p class="section-description">
-      A learning environment designed to encourage understanding,
-      curiosity, practical learning and academic growth.
-    </p>
+<section class="best-excellence" id="excellence">
 
-    <div class="academic-grid">
+  <div class="excellence-container">
 
-      <article class="academic-card reveal">
-        <div class="academic-icon">▤</div>
-        <div>
-          <h3>Strong Foundations</h3>
-          <p>Building understanding through structured learning.</p>
-        </div>
+    <div class="excellence-heading">
+      <span>THE BEST APPROACH</span>
+      <h2>Excellence in Every <em>Learning Experience.</em></h2>
+      <p>
+        An educational environment focused on academic growth,
+        individual potential and all-round development.
+      </p>
+    </div>
+
+    <div class="excellence-grid">
+
+      <article class="excellence-card">
+        <span class="excellence-icon">01</span>
+        <div class="excellence-symbol">✧</div>
+        <h3>Academic Excellence</h3>
+        <p>Strong learning foundations and a focus on academic progress.</p>
       </article>
 
-      <article class="academic-card reveal">
-        <div class="academic-icon">⌘</div>
-        <div>
-          <h3>Practical Learning</h3>
-          <p>Encouraging exploration, observation and application.</p>
-        </div>
+      <article class="excellence-card">
+        <span class="excellence-icon">02</span>
+        <div class="excellence-symbol">◎</div>
+        <h3>Individual Attention</h3>
+        <p>Recognising individual learning needs and student potential.</p>
       </article>
 
-      <article class="academic-card reveal">
-        <div class="academic-icon">✦</div>
-        <div>
-          <h3>Academic Guidance</h3>
-          <p>Supporting students throughout their educational journey.</p>
-        </div>
+      <article class="excellence-card">
+        <span class="excellence-icon">03</span>
+        <div class="excellence-symbol">✦</div>
+        <h3>Experienced Guidance</h3>
+        <p>Supporting students through meaningful teaching and guidance.</p>
       </article>
 
-      <article class="academic-card reveal">
-        <div class="academic-icon">◎</div>
-        <div>
-          <h3>Future Preparation</h3>
-          <p>Helping students prepare for future academic opportunities.</p>
-        </div>
+      <article class="excellence-card">
+        <span class="excellence-icon">04</span>
+        <div class="excellence-symbol">◇</div>
+        <h3>Modern Learning</h3>
+        <p>Encouraging curiosity through engaging learning experiences.</p>
+      </article>
+
+      <article class="excellence-card">
+        <span class="excellence-icon">05</span>
+        <div class="excellence-symbol">⌘</div>
+        <h3>Beyond Academics</h3>
+        <p>Making space for creativity, confidence and personal growth.</p>
+      </article>
+
+      <article class="excellence-card">
+        <span class="excellence-icon">06</span>
+        <div class="excellence-symbol">↗</div>
+        <h3>Future Readiness</h3>
+        <p>Helping students develop skills for their future journeys.</p>
       </article>
 
     </div>
 
-    <a href="academics/" class="btn btn-light" style="margin-top:35px">EXPLORE ACADEMICS →</a>
+  </div>
+
+</section>
+
+  
+<!-- SECTION 08: ACADEMIC PROGRAMMES -->
+<section class="best-programmes" id="programmes">
+  <div class="programmes-container">
+
+    <div class="programmes-heading">
+      <span class="programmes-eyebrow">EXPLORE OUR ACADEMICS</span>
+      <h2>Pathways to <em>Excellence.</em></h2>
+      <p>
+        Explore learning opportunities across our school
+        and pre-university divisions.
+      </p>
+    </div>
+
+    <!-- TABS -->
+    <div class="programmes-tabs" role="tablist"
+         aria-label="Academic divisions">
+
+      <button class="programme-tab active"
+              type="button"
+              id="school-tab"
+              role="tab"
+              aria-selected="true"
+              aria-controls="school-programmes"
+              data-programme="school">
+        <span>01</span> School Education
+      </button>
+
+      <button class="programme-tab"
+              type="button"
+              id="pu-tab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="pu-programmes"
+              data-programme="pu">
+        <span>02</span> PU College
+      </button>
+
+    </div>
+
+    <!-- SCHOOL PROGRAMMES -->
+    <div class="programme-panel active"
+         id="school-programmes"
+         role="tabpanel"
+         aria-labelledby="school-tab">
+
+      <div class="programme-intro">
+        <div>
+          <span>SCHOOL DIVISION</span>
+          <h3>BEST English Medium School</h3>
+        </div>
+        <p>
+          A learning journey focused on academic foundations,
+          character development and student growth.
+        </p>
+      </div>
+
+      <div class="programme-cards">
+
+        <article class="programme-card">
+          <span class="programme-card-number">01</span>
+          <div class="programme-card-icon">✧</div>
+          <h4>Foundational Learning</h4>
+          <p>
+            Building early literacy, numeracy, curiosity
+            and confidence through meaningful learning.
+          </p>
+          <span class="programme-card-bottom">LEARNING FOUNDATIONS</span>
+        </article>
+
+        <article class="programme-card">
+          <span class="programme-card-number">02</span>
+          <div class="programme-card-icon">◇</div>
+          <h4>Progressive Learning</h4>
+          <p>
+            Developing subject understanding, communication,
+            creativity and independent thinking.
+          </p>
+          <span class="programme-card-bottom">KNOWLEDGE & SKILLS</span>
+        </article>
+
+        <article class="programme-card">
+          <span class="programme-card-number">03</span>
+          <div class="programme-card-icon">✦</div>
+          <h4>Secondary Education</h4>
+          <p>
+            Strengthening academic preparation, examination
+            readiness and future learning foundations.
+          </p>
+          <span class="programme-card-bottom">ACADEMIC READINESS</span>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- PU COLLEGE PROGRAMMES -->
+    <div class="programme-panel"
+         id="pu-programmes"
+         role="tabpanel"
+         aria-labelledby="pu-tab"
+         hidden>
+
+      <div class="programme-intro">
+        <div>
+          <span>PRE-UNIVERSITY DIVISION</span>
+          <h3>BEST International PU College</h3>
+        </div>
+        <p>
+          Preparing students for higher education through
+          focused learning and academic guidance.
+        </p>
+      </div>
+
+      <div class="programme-cards">
+
+        <article class="programme-card">
+          <span class="programme-card-number">01</span>
+          <div class="programme-card-icon">✧</div>
+          <h4>Academic Learning</h4>
+          <p>
+            Developing deeper subject understanding and
+            strengthening pre-university academic foundations.
+          </p>
+          <span class="programme-card-bottom">SUBJECT KNOWLEDGE</span>
+        </article>
+
+        <article class="programme-card">
+          <span class="programme-card-number">02</span>
+          <div class="programme-card-icon">◇</div>
+          <h4>Examination Preparation</h4>
+          <p>
+            Supporting students with structured learning,
+            revision and examination readiness.
+          </p>
+          <span class="programme-card-bottom">ACADEMIC PREPARATION</span>
+        </article>
+
+        <article class="programme-card">
+          <span class="programme-card-number">03</span>
+          <div class="programme-card-icon">↗</div>
+          <h4>Higher Education Guidance</h4>
+          <p>
+            Helping learners explore educational pathways
+            and prepare for their next academic stage.
+          </p>
+          <span class="programme-card-bottom">FUTURE PATHWAYS</span>
+        </article>
+
+      </div>
+    </div>
+
+    <div class="programmes-footer">
+      <p>Discover the right educational pathway at BEST.</p>
+      <a href="admissions/">
+        Explore Admissions <span>↗</span>
+      </a>
+    </div>
+
   </div>
 </section>
 
@@ -2797,6 +3581,57 @@ if (statsSection) {
 
   statsObserver.observe(statsSection);
 }
+  
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const section = document.querySelector(".best-programmes");
+  if (!section) return;
+
+  const tabs = section.querySelectorAll(".programme-tab");
+  const panels = {
+    school: section.querySelector("#school-programmes"),
+    pu: section.querySelector("#pu-programmes")
+  };
+
+  function activateProgramme(name) {
+    tabs.forEach(tab => {
+      const active = tab.dataset.programme === name;
+      tab.classList.toggle("active", active);
+      tab.setAttribute("aria-selected", String(active));
+      tab.tabIndex = active ? 0 : -1;
+    });
+
+    Object.entries(panels).forEach(([key, panel]) => {
+      panel.hidden = key !== name;
+      panel.classList.toggle("active", key === name);
+    });
+  }
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => {
+      activateProgramme(tab.dataset.programme);
+    });
+
+    tab.addEventListener("keydown", event => {
+      if (!["ArrowLeft", "ArrowRight", "Home", "End"]
+        .includes(event.key)) return;
+
+      event.preventDefault();
+
+      let next = index;
+
+      if (event.key === "ArrowRight") next = (index + 1) % tabs.length;
+      if (event.key === "ArrowLeft") next = (index - 1 + tabs.length) % tabs.length;
+      if (event.key === "Home") next = 0;
+      if (event.key === "End") next = tabs.length - 1;
+
+      activateProgramme(tabs[next].dataset.programme);
+      tabs[next].focus();
+    });
+  });
+});
+</script>
+
 </script>
 
 </body>
