@@ -2559,6 +2559,48 @@ if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
 
 /* CURRENT YEAR */
 document.getElementById("year").textContent = new Date().getFullYear();
+  // BEST statistics count-up animation
+
+const statsSection = document.querySelector('.best-stats');
+
+if (statsSection) {
+  const counters = statsSection.querySelectorAll('.counter');
+  let statsStarted = false;
+
+  const statsObserver = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting && !statsStarted) {
+      statsStarted = true;
+
+      counters.forEach(counter => {
+        const target = Number(counter.dataset.target) || 0;
+        const duration = 1800;
+        const startTime = performance.now();
+
+        function updateCounter(currentTime) {
+          const progress = Math.min(
+            (currentTime - startTime) / duration,
+            1
+          );
+
+          const eased = 1 - Math.pow(1 - progress, 3);
+          counter.textContent = Math.floor(target * eased);
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+          } else {
+            counter.textContent = target;
+          }
+        }
+
+        requestAnimationFrame(updateCounter);
+      });
+
+      statsObserver.disconnect();
+    }
+  }, { threshold: 0.3 });
+
+  statsObserver.observe(statsSection);
+}
 </script>
 
 </body>
